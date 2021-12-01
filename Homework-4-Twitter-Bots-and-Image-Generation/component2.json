@@ -1,0 +1,85 @@
+{
+  "origin": [
+    "Did you know that: #facts#", "Anakin, #plageuis#", "Quick Star Wars story: #Character# #Action# #Character# on #Location#. The End", "Quick Star Wars story: #Character# #Movement#. To be continued...."
+  ],
+  "plageuis": [
+    "Did you ever hear the Tragedy of Darth Plagueis the wise?", 
+    "I thought not.", "It's not a story the Jedi would tell you.", 
+    "It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life...", 
+    "He had such a knowledge of the dark side that he could even keep the ones he cared about from dying.", 
+    "The dark side of the Force is a pathway to many abilities some consider to be unnatural.", "He became so powerful...",
+    "the only thing he was afraid of was losing his power, which eventually, of course, he did.", 
+    "Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep.", 
+    "It's ironic he could save others from death, but not himself.",
+    " - Sheev Palpatine"
+
+  ],
+  "facts": [
+    "R2-D2 once spoke English, and was kind of a jerk.",
+    "the original Return of the Jedi ending saw Luke Skywalker turn evil.",
+    "Carrie Fisher slapped Oscar Isaac more than 40 times…on the first day of shooting.",
+    "Samuel L. Jackson had his lightsaber engraved with a bad word.",
+    "Adam Driver recorded his last lines as Kylo Ren in his own closet.",
+    "the first Star Wars almost caused an actual war.",
+    "*NSYNC was originally in Attack of the Clones.",
+    "Yoda's original name was Buffy.",
+    "There's a small South Pacific island that accepts Star Wars coins as legal tender.",
+    "Jabba the Hutt was originally played by a person, then in the remakes made into a monster"
+  ],
+  "Character": [
+    "Luke",
+    "Leia",
+    "Han Solo",
+    "Darth Vader",
+    "Kylo Ren",
+    "Rei",
+    "Jabba Fett",
+    "Chewie",
+    "Padmé",
+    "Ani",
+    "Mace Windu",
+    "Yoda",
+    "Darth Sidious"
+  ],
+  "Location": [
+    "Hoth",
+    "Tatooine",
+    "Kashyyyk",
+    "Dathomir",
+    "Mustafar",
+    "Coruscant"
+  ],
+  "Action": [
+    "stabs with a light saber",
+    "force chokes",
+    "counts midichlorian's",
+    "shoots with a blaster",
+    "grants emergenency powers to",
+    "asks what happened to the younglings to"
+  ],
+  "Movement": [
+    "jumps to hyperspace",
+    "force jumps",
+    "runs away",
+    "sneaks off the #Ship#", 
+    "sneaks onto the #Ship#"
+  ],
+  "Ship":[
+    "Death Star",
+    "Millenium Falcon",
+    "Tie Fighter",
+    "X Wing",
+    "Y Wing",
+    "Death Star II",
+    "Imperial Star Destroyer"
+  ]
+  
+  
+
+
+
+	
+}
+
+
+

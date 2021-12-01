@@ -1,0 +1,22 @@
+SENTENCE -> <NOUN_PHRASE> <VERB_PHRASE>.
+NOUN_PHRASE -> <DET> <ADJ> <NOUN>
+NOUN_PHRASE -> <DET> <NOUN>
+VERB_PHRASE -> <VERB> <PREP>|<VERB>
+
+DET -> the|a|every|an|not every|some
+NOUN -> <CORPUS_NOUN>|moon|sun|doctor|planet|raindrop|clown|man|woman|person|city
+CORPUS_NOUN -> $nouns.txt
+VERB -> <MOVEMENT_VERB>|<SPEECH_VERB>
+MOVEMENT_VERB -> walks|bikes|runs
+SPEECH_VERB -> screams|talks|says|whispers
+ADJ -> green|fast|orange|angry|happy|sad
+
+# You can combine rules together using the vertical bar
+PREP -> to|under|with|over|aside
+
+# You can also separate groups of rules with the same "head" 
+# (term for the nonterminal symbol the rule rewrites) onto
+# multiple lines. Commas can go inside of rule "bodies" (term
+# for the right-hand side of a rule), since the delimiter is
+# now the vertical bar
+PREP -> aside, under, and beneath|around

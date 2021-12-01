@@ -1,0 +1,26 @@
+# To write to the state, include the syntax " @variable_name" 
+# within a reference to a nonterminal symbol.
+
+# For instance, the reference <NAME @hero_full_name> causes whatever 
+# text segment <NAME> ends up producing to be written to the engine 
+# state with the variable name "hero_full_name".
+
+# To read from the state, reference a variable directly, using the 
+# syntax "<@variable_name>".
+
+# For instance, the reference <@hero_full_name> causes the string
+# stored in the state in the variable "hero_full_name" to be placed
+# at the location of the reference.
+
+# If the grammar engine ever encounters a variable that is not in the
+# engine state, it will throw an error -- so be sure to only reference
+# variables that you know will be defined by the time the engine needs
+# to resolve the variable reference.
+
+STORY -> <NAME @hero_full_name> is the hero of this story. <@hero_full_name> left <PLACE @origin> to visit <PLACE @destination>. In <@destination> <@hero_first_name> changed their first name to <FIRST_NAME @hero_first_name>. <@hero_first_name> became <ADJ @feeling> in <@destination> and decided never to return to <@origin>. <@hero_first_name> was <@feeling> for the rest of time. The end!
+
+NAME -> <FIRST_NAME @hero_first_name> <LAST_NAME @hero_last_name>
+FIRST_NAME -> $forenames.txt
+LAST_NAME -> $surnames.txt
+PLACE -> $countries.txt|Minnesota|Northfield|Carleton College|Macalester College
+ADJ -> $adjectives.txt
