@@ -1,0 +1,2 @@
+how I would do this problem, I think I would first count the total amount of words in each section of the templates, then, I would multiply the total outputs of each of the different parts, that should be the total different components that it can produce. 
+i.e. if it was a template w 5 parts and then each part produces a,b,c,d,e outputs, I would multiply the total parts and abcde should be the total amount of outputs. 

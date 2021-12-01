@@ -1,0 +1,29 @@
+<BEGIN TEMPLATES>
+
+P1 -> <Random_Words> <Random_Words> <Random_Words> <Random_Words> <Random_Words>
+
+P2 -> <Random_1> <Random_2> <Random_3> <Random_4>
+
+P3 -> Coke: <Coke> Celtic: <Celtics> HxH: <HXH>
+
+P4 -> <Random_1> <Coke> <HXH> <Random_Words> <Random_3>
+
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+Coke -> $coke.txt
+Celtics -> $celtics.txt
+HXH -> $HxH.txt
+
+Random_Words -> sam,mam,bam,lam,cam,tam,fram,kazam,wam,sham,lamb,damb,damn,dam,beaver,hoover,hover,board,think,stink,tink,sink,link,zelda,sword,GOT,stark,jon,eddard,winter is coming
+Random_1 -> $activities.txt
+Random_2 -> $adjectives.txt
+Random_3 -> $adverbs.txt
+Random_4 -> $animals.txt
+
+
+
+<END SLOTS>

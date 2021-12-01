@@ -1,0 +1,25 @@
+
+<BEGIN TEMPLATES>
+
+LETTER -> <Start> <Start> \n My<Adj> <Noun><Adverbs> <Verbs> your<Adj> <Noun>. You are my<Adj> <Noun>: my<Adj> <Noun>. My<Adj> <Noun><Adverbs> <Verbs> your<Adj> <Noun>. You are my<Adj> <Noun>. \n Yours<Adverbs> \n M.U.C.
+
+
+<END TEMPLATES>
+
+
+
+
+<BEGIN SLOTS>
+
+Adj ->  anxious, wistful, curious, craving, covetous, avid, unstatisfied, eager, fervent, ardent, breathless, impatient, loving, lovesick, affectionate, tender, sweet, sympathetic, fond, amorous, erotic, passionate, devoted, dear, precious, darling, little, loveable, adorable,,
+Start -> dear,darling,honey,jewel,love,duck,moppet,sweetheart
+
+Noun -> desire,wish,fancy,liking,love,fondness,longing,yearning,ambition,eagerness,ardour,appetite,hunger,thirst,lust,passion,affection,sympathy,fellow feeling,tenderness,heart,devotion,fervour,enthusiasm,rapture,enchantment,infatuation,adoration,charm
+
+Adverbs ->  anxiously, wistfully, curiously, covetously, eagerly, avidly, keenly, burningly, fervently, ardently, breathlessy, impatienty, lovingly, affectionately, tenderly, fondly, passionately, devotedly, seductively, winningly, beautifully,,
+
+Verbs -> desires,wishes,longs for,hopes for,likes,clings to,wants,hungers for,thirsts for,yearns for,lusts after,sighs for,pines for,woos,attracts,tempts,loves,cares for,is wedded to,holds dear,prizes,treasures,cherishes,adores
+
+
+
+<END SLOTS>

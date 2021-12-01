@@ -1,0 +1,19 @@
+<BEGIN TEMPLATES>
+
+P1 -> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> <ALDO> 
+
+
+P2 -> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> <SAM> 
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+ALDO -> founder,tribute,rum,that,in,one,aged,legacy,selection,intact,years,ours,termination,our,stopped,some,andres,man,who,to,was,the,is,in,4,aging,better,the,first,brugal,search,end,the,casks,born,one,whose,essence,tenacious,that,is,aging,smelly,legend,casks,bourbon,realized,and,not,for,rum,tireless,two,ex,best,from,is,until,6,from,treasured,the,achieved,or,maintained,like,that,to,the,from,an,exceptional,is,possbile,to,5,ex,from,proposed,it's,years,second,what,\n
+
+SAM -> bunches,along, dad’s, you, miss, CBS, baby g, that,he, for, rehab, couple’s, name, me, is, Hayward, he,his, on, man, team, little, he, recently, baby b, but, Gordon, be, he, as, finally, that, and, initially, recently, in, we’re, baby g, to, the, in-back, his, on, team, his, Robyn, run, the, conference, \n
+
+
+
+<END SLOTS>

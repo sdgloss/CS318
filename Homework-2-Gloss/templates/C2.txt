@@ -1,0 +1,27 @@
+<BEGIN TEMPLATES>
+
+P1 -> <DET> <ADJ> <NOUN> <VERB> <PREP> <DET> <NOUN>.
+PROBABILISTIC -> "James is happy" is five times more likely than "James is sad" to appear after this colon: <JAMES>
+P3 -> The adjective is optional: everything is<OPT>!
+P4 -> The adjective is optional: everything is<OPT2>!
+CONJUGATION -> <ARTICLE> <ANIMAL> riding atop <ARTICLE> <ANIMAL>.
+P7 -> <DET>\n <ADJ> <NOUN>\n <VERB> <PREP>\n <DET> <NOUN>.
+
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+ARTICLE -> a,an
+ANIMAL -> eagle,monkey,elephant,mouse,snake,bird,orangutan
+DET -> the,a,every,an,not every,some
+NOUN -> moon,sun,doctor,planet,raindrop,clown,man,woman,person,city
+VERB -> walks,talks,runs,screams
+ADJ -> green,fast,orange,angry,happy,sad
+PREP -> to,under,with,over,aside
+JAMES -> James is happy,James is happy,James is happy,James is happy,James is happy,James is sad
+OPT -> , fine,
+OPT2 -> ,,,,,,,,,, sad, happy, fun, fine, boring, smooth, loud, swift, difamatory, uxorious
+
+<END SLOTS>

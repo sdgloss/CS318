@@ -1,0 +1,22 @@
+<BEGIN TEMPLATES>
+
+P1 -> Character: <1CHARACTER> \n Locale: <2LOCALITY> \n Main Desire: <3MAINDESIRE> \n First Obstacle: <4_6OBSTACLE> \n First Means: <5_7ANOTHERMEANSTOOBTAIN> \n Second Obstacle: <4_6OBSTACLE> \n Second Means: <5_7ANOTHERMEANSTOOBTAIN> \n Threat: <8THREATENEDWITH> \n Twist: <9TWIST>
+
+
+P2 -> There once was a <1CHARACTER>. They lived in <2LOCALITY>. All they wanted in life was <3MAINDESIRE>. They could never obtain it, though, because they were going <4_6OBSTACLE>. One day, to their surprise, they got what they wanted by learning to <5_7ANOTHERMEANSTOOBTAIN>. However, it wasn't enough because they would soon know what it was like <4_6OBSTACLE>. They had never faced something so difficult, but they knew it would eventually work out. And then... it did. They overcame it by gaining the ability to <5_7ANOTHERMEANSTOOBTAIN>. Suddenly, they were threatened with <8THREATENEDWITH>. No one knew that <9TWIST> was in the cards for our protagonist, but just like that, they were able to achieve their goal.
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+1CHARACTER -> $scale_characters.txt
+2LOCALITY -> $scale_locales.txt
+3MAINDESIRE -> $scale_revenge.txt, $scale_relief.txt,$scale_possessions.txt
+4_6OBSTACLE -> $scale_obstacles.txt
+5_7ANOTHERMEANSTOOBTAIN -> $scale_means.txt
+8THREATENEDWITH -> $scale_overcome.txt
+9TWIST -> $scale_drama.txt
+
+
+<END SLOTS>

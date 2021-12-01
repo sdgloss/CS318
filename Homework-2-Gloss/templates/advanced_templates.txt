@@ -1,0 +1,68 @@
+# If the linebreaks are weird, widen this middle pane of your Repl.it view.
+
+# Here's a comment. Any line in this file that begins with a "#" will be ignored,
+# just like in Python code. If the line breaks in this file look weird, try expanding
+# the width of this pane in your Repl.it view.
+
+<BEGIN TEMPLATES>
+
+# Templates are defined in this portion of the file -- i.e., between "<BEGIN TEMPLATES>" 
+# and "<END TEMPLATES>".
+
+# This is a simple template that produces sentences. It's made up of two parts: the
+# template name ("SENTENCE") and the actual template, which are separated by the 
+# delimiter "->". You can put as much whitespace (or tabs) before and after the 
+# "->" delimiter as you'd like. A template is a line of text that includes references
+# to slots, which are defined below. To reference a slot, place it's name between
+# angle brackets, like this: <[SLOT_NAME]>. µNote how you can put in text snippets that
+# are the same every time the template is filled in, such as "red" and "quickly" Here
+# (not to mention all the whitespace characters). These are called "static elements."
+
+BASIC_SENTENCE  ->      <DET> red <NOUN> <VERB> quickly.
+
+# Put one template on each line. Note that you can't include linebreaks or newline
+# characters in a template.
+
+COMPLEX_SENTENCE  ->  <DET> <ADJ> <NOUN> <VERB> <PREP> <DET> <ADJ> <NOUN>. The end.
+
+# Here's a template that uses the <ANIMAL> slot, which does something special (see below).
+
+ANIMAL_SENTENCE  ->      <DET> happy <ANIMAL> <VERB> <PREP> <DET> sad <ANIMAL>.
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+# Slots are defined in this portion of the file -- i.e., between "<BEGIN SLOTS>" 
+# and "<END SLOTS>".
+
+# Here's a slot that is filled in with determiners (https://en.wikipedia.org/wiki/Determiner).
+# Each slot definition has two components: the slot name ("DET") and the slot values, which
+# are strings that can be used to fill in the slot. These two components are separated by 
+# the "->" delimiter, while the slot values themselves are separated by commas. For now,
+# it's not possible to include a comma in a slot value.
+
+DET -> the,a,every,an,not every,some
+
+# Here's a bunch more slots.
+
+NOUN -> moon,sun,doctor,planet,raindrop,clown,man,woman,person,city
+VERB -> walks,talks,runs,plays,eats,sleeps
+ADJ -> green,red,orange,angry,happy,sad
+PREP -> to,under,with,over,aside
+
+# Here's a special slot that loads in all the strings included in a corpus file -- in this
+# case, "animals.txt". To load in a corpus, simply place a dollar sign before the filename
+# of the corpus. For this work, that corpus file must be placed in the "corpora" folder, 
+# and it must have one element on each line. See "corpora/_README.txt" for more info. Note
+# that, for now, you can't have a regular slot value with a dollar sign as the first character.
+
+ANIMAL -> $animals.txt
+
+# You can also add on other slot values in addition to whatever you're loading from a corpus
+# file. Just place a comma between corpus-file references and any additional slot values.
+
+ART_ISMS -> carletonianism,$art_isms.txt,northfieldism
+
+<END SLOTS>

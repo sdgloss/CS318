@@ -1,0 +1,37 @@
+
+<BEGIN TEMPLATES>
+
+7a -> <A> <B> can't <D> <E>, however, <I> <J> might try <PAST_T>
+7b -> <1_3> <4> <5> <6> <7>. Meanwhile, <10> <11>
+
+7c -> <AdjVerb> <ProperNouns> <Verb> <Monster> <AdVerb>
+
+<END TEMPLATES>
+
+
+
+
+<BEGIN SLOTS>
+
+A -> Artificial,Amateur,Amazing,Analytic,Actual,Able,Absolute,Acrimonious,Aeronautical,Astronomical
+B -> bananas,bears,bison,bluebirds,bees,bats,baboons,beavers,buffalos,buzzards
+D -> draw,dance,drink,drive,date,dazzle,disguise,dive,divert,dream
+E -> effectively,efficiently,effortlessly,elaborately,eloquently,enjoyably,enough,exceptionally,eternally,ethically 
+I -> idealist,idiotic,improper,irate,irrelevant,imbecile,imaginary,immortal,immorale,impaired
+J ->Jon,John,James,Jacob,Jack,Joe,Joseph,Jo,Joan,Joanne,Jolene,Joanna
+PAST_T -> unenthusiastically,unconventionally,unfortunately,unsuccessfully,usefully,unilaterally,underwater,underground,upstairs,unusually
+
+1_3 -> He,She,Joe,Max,Sam,Sal,Lia,Leo,Lee,Zoe
+4 -> held,made,lost,wore,gave,kept,sent,bent,sold,took
+5 -> Jake's,John's,Maia's,Dale's,Aldo's,Dave's,their,Eric's,Colt's,Adam's
+6 -> bright,Soviet,modern,wooden,simple,sexual,common,French,exotic,iconic
+7 -> clothes,garment,alcohol,divorce,cocaine,ecstasy,Cholera,perfume,cranium,pancake
+10 -> committees,situations,secretaries,principals,executives,professors,candidates,solicitors,scientists,publishers,successors
+11 -> concentrate,contaminate,democratize,desexualize,dessimulate,overprotect,overpromise,second-guess,resuscitate,romanticize
+
+AdjVerb -> slowly,fast,quickly,early,late,sometimes,later,often,afterwards
+ProperNouns -> Sam,Aldo,James,Joe,Jane,Jack,Jon,Yemi,Aishee,Kaeden
+Verb -> eats,kills,explodes,destroys,licks,zaps,bites,tickles,slaps,force-chokes
+Monster -> Cthulu,Bigfoot,Sasquatch,Dracula,Frankenstein,Darth-Vader,Godzilla,Chucky,King-Kong,Chewbacca 
+AdVerb -> normally,accidentally,once,abruptly,anxiously,bashfully,worriedly,silently,cheerfully,sanctimoniously,
+<END SLOTS>

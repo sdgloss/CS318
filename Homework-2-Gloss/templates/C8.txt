@@ -1,0 +1,40 @@
+
+<BEGIN TEMPLATES>
+
+QUATRAIN -> <2> <1> <Rhyme5> \n <4> <3> <Rhyme1> \n <3> <Rhyme5> \n <2> <2> <3> <Rhyme1>
+
+Limerick -> The <3noun> <2verb> <Rhyme3> \n <2verb> <3noun> <1> <Rhyme3> \n <2> <Rhyme4> \n <2verb> <Rhyme4> \n <1> <3noun> <2verb> <Rhyme3>
+
+Haiku -> <3noun> <2verb> \n <Rhyme5> <Rhyme1> <1> \n <2> <Rhyme1> <2>
+
+
+<END TEMPLATES>
+
+
+
+
+<BEGIN SLOTS>
+
+Rhyme5 -> refridgerator,accelerator,accumulator,administrator,amphitheater,amphitheatre,appropriator,cogenerator,collaborator,communicator,conciliator,consolidator,coordinator,defibrillator,denominator,evaporator,excogitator,exterminator,facilitator,flight indicator,flightsimulator,flux applicator,food elevator,freight elevator,full radiator,growth regulator,hand calculator,house decorator,illuminator,incinerator,interpolator,interrogator,investigator,manipulator,negotiator,noncooperator,originator,pontificator,pontificator,procrastinator,prognosticator,pulse generator,quartz oscillator,rectificator,recuperator,room decorator,sales demonstrator,scarificator,sermonator,soonerlater,speed indicator,testificator,turn indicator,variegator,wind generator
+
+Rhyme1 -> train,bain,baine,bane,bayne,beigne,beinn,blain,blaine,blane,blayne,brain,braine,brane,brein,cain,caine,cane,cayne,chain,chaine,chane,cheyne,crain,craine,crane,crayne,dain,daine,dane,dayne,deign,drain,draine,drane,drein,duan,duane,dwain,dwayne,fain,faine,fainne,fane,fayne,feign,fein,feyne,flain,flaine,frain,fraine,frane,frayn,frayne,frein,freyne,gain,gayne,ghain,glane,grain,graine,grainne,grane,grein,hahne,hain,haine,hane,hayn,hayne,heyn,heyne,jain,jane,jayne,kain,kaine,kane,kaneh,kayne,krain,krane,krein,lain,laine,lane,layne,ln,main,Maine,mane,maneh,mayne,meyn,neyne,paign,pain,paine,pane,payne,phane,plain,plane,prane,quain,quoin,rain,raine,rainn,rayne,reign,rein,reine,sain,saine,sane,sdain,sdeign,shain,shaine,shane,shayne,skain,skane,skein,slain,slaine,slane,spain,spane,splain,splaine,sprain,stain,stane,strain,strane,strein,svane,swain,swaine,swayne,sweyn,taine,teyne,thain,thaine,thane,thayne,trane,tshwane,twain,uaine,vain,vane,vein,veine,veyne,vrain,wain,wane,wayne,zain,zane
+
+2 -> purple,perfect,twelve,silver,seven,thirteen,Godard,about,Thursday,again,Tuesday,pizza,thirty,donate,princess,people,water,future,Heaven,happy,sixty,country,pumpkin,Christmas,special,else,over,Angel,freedom,able,music,fifty,ana,thousand,fourteen,party,Monday,picture,office,language,nature,Kelly,city,Mumbai,woman,twenty,sugar,husband,anna,
+1 -> soul,rich,age,duck,id,ya,dog,foot,cat,snitch,film,ex,lion,red,and,live,dream,key,it,pain,own,laugh,rain,once,bo,ball,with,fire,he,fa,six,wood,care,can,sun,cake,Fe,back,faith,ers,and,mi,moon,peace,eh,ell,off,golf,nine,cup,words,smile,school,breath,so,Bi,less,down,bra,land,blue,house,tic,ink,god,gone,pie,kate,watch,come,high,ah,hard,bed
+3 -> Halloween,Mexico,general,liberty,volleyball,depression,aria,tomorrow,alcohol,goddess,Vanessa,silly,capital,subtraction,personal,remember,ology,Asian,quadrillion,every,ambulance,hospital,Ebola,pinata,example,medicine,seventeen,sophia,obama,umbrella,affection,pretty,gravity,safety,computer,funeral,Uranus,volcano,violet,allusion,abigail,element,bakery,solution,dopamine,homework,Jonathan,convection,Ireland,Valium,afterlife,abstinence,suffering,blancmange,patience,Creation,maneuver,dynasty,advocate,Harrison,margera,hopeless,koala,lithium,genius,exchange,discipline,coconut,illusion,Kannada,helium,flamingo,Delicious,turquoise,attention,companion,misery,Chicago,paradox,savannah,Lydia,Athena,poverty,labia,recycle,whimsical,Caroline,ironman,graduate,Alaska,skateboard,diamonds,sangria,skeleton,difficult,celery,Shakespeare,selena,carnival,girlfriend,safari,amendment,trampoline,battery,avenge,Antigone,tragedy,quintillion,easily,architect,receiver,Malachi,Fabian,accountant,bargello,twentieth,expression,abiding,deception,Caribbean,Genesis,careful,tiara,triangle,Jefferson,abating,protection,Tagalog,cinema,adopted,Mexican,tambourine,addiction,trying,therapy,lyrical,oracle,nobody,endearment,audio,discover,Ohio,preterite,gallery,gasoline,magazine,ebony,anytime,innocence
+4 -> identical,America,beautiful,American,everything,January,undemanding,Virginia,Australia,irregular,aboveboard,information,Elizabeth,macaronic,intermittent,preposition,February,bullying,literature,secretary,Victoria,Amerindic,homecoming,independence,alligator,ordinary,syllabicate,alternative,technology,celebration,Carolina,maleficent,watermelon,Ariana,appreciate,community,relaxation,salmonella,alien,worrying,forgiveness,aberration,vegetable,eternity,amelia,belligerent,angelica,retirement,television,intelligence,invisible,insomnia,everyday,education,silhouette,relationship,segregation,aquarium,inspiration,loneliness,professional,infinity,serenity,Cinderella,caterpillar,ability,entertainment,Indiana,integrity,adversity,sporadically,righteousness,constellation,equality,intelligent,celebrity,Hawaii,renovation,helicopter,Italian,Canadian,elocution,generation,adaptation,transformation,abiotic,katakana,agitation,necessary,environment,destination,revolution,insulation,Antarctica,advertising,motivation,malnutrition,organism,Cebuano,unstoppable
+
+2verb -> aborts,adorns,becalms,believes,caters,coddles,directs,devotes,elbows,estranges,follows,frightens,glowers,glistens,hovers,honors,ignores,impeaches,jingles,jiggles,kayaks,knuckles,d listens,lowers,murders,molders,neglects,notices,opines,offers,ponders,pretends,questions,quavers,retorts,reviews,varies,vacates,worships,wavers,x-rays,yodels,yammers,zigzag.
+3noun ->orange,family,chocolate,banana,Africa,happiness,piano,eleven,animal,Wednesday,seventy,Melissa,chipotle,potato,business,favorite,elephant,erica,adventure,energy,history,Georgia,consonant,India,feminine,ninety,masculine,Indian,holiday,syllable,Madison,Canada,Jupiter,envelope,diamond,memory,Adrian,something,revenge,harmony,pollution,President,radio,musical,melody,Washington,basketball,Florida,mercury,initial
+
+
+
+
+Rhyme3 -> ecstacy,bestially,bethany,blessedly,breathlessly,brevity,cecity,centrally,chemically,chemistry,clemency,credibly,debauchee,density,deputy,desperately,destiny,devilry,dreadfully,ebony,ecoli,ecstasies,elegy,embassy,emboli,emboly,empathy,endlessly,enemy,enmity,entity,entropy,equity,exstrophy,federally,felony,flexibly,fretfully,gemini,generally,greasily,headachy,heavenly,heavily,helotry,helpfully,helplessly,hennessey,hennessy,heresy,jealously,jealousy,kennedy,legacy,legatee,lengthily,leprosy,levelly,medically,melody,mentally,messily,necropsy,peasantry,pedantry,pedigree,penalty,pendency,pettily,pleasantly,pleasantry,preciously,preferably,pregnancy,prelacy,presently,prettily,queasily,readily,recipe,recklessly,remedy,restfully,restlessly,revelry,secondly,semele,sensibly,separately,sesame,seventhly,seventy,severally,sketchily,specially,specialty,speciously,spellacy,splendidly,splenectomy,steadily,tenancy,tenantry,tendency,tensity,tentatively,testacy,testily,tetany,theomancy,theosophy,thessaly,threnody,trenchantly,velvety,venally,weaponry,zealotry,zealously,zestfully
+
+
+Rhyme4 -> revolution,absolution,adequation,adlocution,advolution,airpollution,allocution,andalucian,andalusian,assecution,attribution,collocution,comminution,consecution,constitution,contribution,convolution,destitution,devolution,diminution,dissolution,distribution,elocution,evolution,execution,exolution,exsolution,illocution,imminution,insecution,institution,involution,liliputian,lilliputian,noisepollution,nonsolution,obvolution,perlocution,persecution,prosecution,prostitution,redargution,resolution,restitution,retribution,rosicrucian,soundpollution,substitution
+
+
+
+<END SLOTS>

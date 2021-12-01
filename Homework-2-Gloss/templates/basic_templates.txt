@@ -1,0 +1,16 @@
+<BEGIN TEMPLATES>
+
+SENTENCE -> <DET> <ADJ> <NOUN> <VERB> <PREP> <DET> <NOUN>.
+
+<END TEMPLATES>
+
+
+<BEGIN SLOTS>
+
+DET -> the,a,every,an,not every,some
+NOUN -> moon,sun,doctor,planet,raindrop,clown,man,woman,person,city
+VERB -> walks,talks,runs,screams
+ADJ -> green,fast,orange,angry,happy,sad
+PREP -> to,under,with,over,aside
+
+<END SLOTS>
