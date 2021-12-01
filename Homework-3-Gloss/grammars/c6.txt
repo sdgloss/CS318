@@ -1,0 +1,121 @@
+
+
+Action_1 -> <@name_1> <Action @action1> 
+Action_2 -> <@name_2> <Action @action2>
+Action_3 -> <@name_1> <Action @action3>
+Action_4 -> <@name_2> <Action @action4>
+Action_5 -> <@name_1> <Action @action5>
+
+Name1 -> <first_name @name_1>
+Name2 -> <first_name @name_2>
+
+
+
+Dialogue_1 -> <@name_1>: Hey. I heard about your <animal @animal>.
+Dialogue_12 -> <@name_2>: Thank you, I <feelings> that <@animal>. I will really, oddly, miss them.
+Dialogue_13 -> <@name_1>: I heard that she was run over by <wrestler @wrestler>!
+Dialogue_14 -> <@name_2>: Yeah! <@wrestler> used to be my favorite wrestler too! What a <traits @traits> world. 
+Dialogue_15 -> <@name_1>: <@traits>? What an intersting way to describe our world. 
+Dialogue_16 -> <@name_2>: I at least hit their <vehicle @vehicle> with <wrestleMove @wMove>!
+Dialogue_17 -> <@name_1>: <@wMove>! Of course it was. I woulda done it if you didn't. 
+Dialogue_18 -> <@name_2>: Awesome! Maybe we should act like <wrestler> and <wrestler> sometime and get in the ring. 
+Dialogue_19 -> <@name_1>: That sounds great but I have to run!
+Dialogue_10 -> <@name_2>: Well. It was nice seeing you. It helped me forgot about my <@animal> for a moment. 
+
+
+
+wrestleMove -> $wrestling_moves.txt
+animal -> $animals.txt
+wrestler -> $wrestlers.txt
+traits -> $traits.txt
+vehicle -> $vehicles.txt
+
+Dialogue_2 -> <@name_2>: I heard you were doing <@action1>
+Dialogue_21 -> <@name_1>: Well I saw you doing <@action2>
+Dialogue_22 -> <@name_1>: Well we seem to be at an impasse
+Dialogue_23 -> <@name_2>: How do you propose we solve this then?
+Dialogue_24 -> <@name_1>: <sports @sport> game?
+Dialogue_25 -> <@name_2>: <@sport> game!
+Dialogue_26 -> <@name_1>: Be warned I am going to hit you with my best <@sport> version of <wrestler> <wrestleMove>.
+Dialogue_27 -> <@name_2>: I am so <@traits>!
+Dialogue_28 -> <@name_1>: I see what you did there. Making fun of me eh?!
+Dialogue_29 -> <@name_2>: Maybe! But it's time to showdown!
+
+sports -> $sports.txt
+
+Dialogue_3 -> <@name_1>: <@name_2>, what are you doing here?
+Dialogue_31 -> <@name_2>: I am here to apologize for <outcome @outcome>
+Dialogue_32 -> <@name_1>: Sorry? Why? It was my fault for you <@outcome> as much as yourself.
+Dialogue_33 -> <@name_2>: Well, you seemed angry with me.
+Dialogue_34 -> <@name_1>: That's because we didn't get to wrestle like I had hoped!
+Dialogue_35 -> <@name_2>: Lets do it then. I will hit you with my <wrestleMove @wMove1>!
+Dialogue_36 -> <@name_1>: I see your <@wMove1> and <protection>. I then counter you <wrestleMove @wMove2>. 
+Dialogue_37 -> <@name_2>: I see you <wrestler> and your <@wMove2> and I <protection>. I then hit you with my <wrestleMove @wMoveFin>
+Dialogue_38 -> <@name_1>: I missed my dodge! Ouch! That was a critical hit. Good game!
+Dialogue_39 -> <@name_2>: Good game! We should play again. 
+
+outcome -> winning|losing
+protection -> dodge|take full damage|avoid only partially
+
+
+Dialogue_4 -> <@name_2>: Heyo. 
+Dialogue_41 -> <@name_1>: No. Don't <@action4>!
+Dialogue_42 -> <@name_2>: Why not. I had <feelings @feel> to do <@action4> in my childhood. It used to make me feel joy that I lost ever since <@outcome> against you. 
+Dialogue_43 -> <@name_1>: Well that's very <@traits> of you. 
+Dialogue_44 -> <@name_2>: I see what you did there. 
+Dialogue_45 -> <@name_1>: Well, maybe it's a sign we should play <sports @sport2>?
+Dialogue_46 -> <@name_2>: No. I don't like <@sport2>.
+Dialogue_47 -> <@name_1>: Well, then what do you propose? 
+Dialogue_48 -> <@name_2>: That we never see each other again. Because if we do, I will <action @action> you. 
+Dialogue_49 -> <@name_1>: Okay man. I get it. Peace. 
+
+
+Dialogue_5 -> <@name_1>: <@name_2> <@name_2> <@name_2>!
+Dialogue_51 -> <@name_2>: I see you. You know what this means. It means we have to wrestle! Because I am going to <@action> you!
+Dialogue_52 -> <@name_1>: Right here?! Well, I must pre-emptive strike <wrestleMove @wMove3>!
+Dialogue_53 -> <@name_2>: <@wMove3>! How weak! Counter <wrestleMove @wMove4>!
+Dialogue_54 -> <@name_1>: I see <@wMove4> and <protection! 
+Dialogue_55 -> <@name_2>: In the process there you fell down. Time to double strike with <wrestleMove>!
+Dialogue_56 -> <@name_1>: Oh no! Don't be like <wrestler @w1> and <@action> me!
+Dialogue_57 -> <@name_2>: <@w1> and <@wrestler> are my idols you know this. Now I must <@action> you!
+Dialogue_58 -> <@name_1>: OH NO. THE PAIN. THE PAIN. GOOD BYE CRUEL WORLD!
+Dialogue_59 -> <@name_2>: Well, I seemed to overdo that, hopefully the police don't find me. 
+
+
+action -> tickle|kill|hug|squeeze|arrest|spit on|kick|murder|destroy|Stone Cold Steve Austin
+
+first_name -> ERYK|ALEX|ANDREW|THOMAS|STEVEN|JOSHUA|SAM|JUSTIN|EZEKIAL
+
+Parantheticals -> $traits.txt
+
+Scene_Heading -> <directions> <settings>
+
+settings -> $settings.txt
+
+directions -> Entering|Exiting|Near|Leaving
+
+Transitions -> <transition>
+
+transition -> FADE OUT|MOVE STAGE LEFT|CUT TO BLACK|LIGHTENING STRIKES COVERING SCREEN|ZOOM IN ON <@name_1>|ZOOM IN ON <@name_2>|ZOOM OUT ON <@name_1>| ZOOM OUT ON <@name_2>
+
+Endings -> <@name_1> lost and died. The End
+
+Action -> $activities.txt
+feelings -> hated|loved|wanted to murder|admired|loathed|adored
+
+Get_Name1 -> <@name_1>
+Get_Name2 -> <@name_2>
+Get_Action -> <@action>
+Get_Action1 -> <@action1>
+Get_Action2 -> <@action2>
+Get_Action3 -> <@action3>
+Get_Action4 -> <@action4>
+Get_Action5 -> <@action5>
+Get_Animal -> <@animal>
+Get_Sport -> <@sport>
+Get_Outcome -> <@outcome>
+Get_Move1 -> <@wMove1>
+Get_Move2 -> <@wMove2>
+Get_MoveFin -> <@wMoveFin>
+Get_Wrestler1 -> <@w1>
+Get_Wrestler2 -> <@wrestler>

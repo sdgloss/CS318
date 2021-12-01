@@ -1,0 +1,11 @@
+Five things I wish we could do with our grammars:
+
+1) I wish our grammar did things like fix tense and such depending on situation//there was a way to do that not in post-production
+
+2) I wish there was more creativity in style, I feel like a lot of the work done is you pre-chosing the words to make them work together
+
+3) I find that debugging the .txt files is considerably harder than debugging the code so I wish that was easier/python would be more upfront with the errors
+
+4) I am sad that you can't do many programatic elements in the TXT files, there is very little variance of choice. I can't run loops or other things, so it makes things like dialogue very concrete instead of flexible. 
+
+5) I wish that the TXT files were more user interferace driven, obviously the ability to pre-set terminal slot values is nice but allowing the user to chose the style which the grammar would be heading would be nice. 

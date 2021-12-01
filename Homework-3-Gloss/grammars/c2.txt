@@ -1,0 +1,35 @@
+2a -> My favorite pokemon is <Pokemon>. It is the best because <@pokemon> has the coolest name. 
+
+INDIRECT_REFERENCE ->  My full name is <FULL_NAME>, but you can call me <@first_name>.
+
+ACT_1 -> <FULL_NAME> uses a <Prop @prop> to play <Sport @sports>
+
+ACT_2 -> <@first_name> <should> have used a <@prop> to play <@sports>
+
+2d -> <@second_name> <@action> <@reciever>
+
+
+
+
+FULL_NAME -> <first_name @first_name> <last_name>
+
+first_name -> Eryk|Alex|Andrew|Thomas|Steven|Joshua|Sam|Justin|Ezekiel
+
+last_name -> Jones|Johnson|Williams|Jefferson|Gloss|Elliot|Prescott
+
+Prop -> $objects.txt
+Pokemon -> <pokemon @pokemon>
+pokemon -> $pokemon.txt
+Sport -> $sports.txt
+should -> should|shouldn't
+action -> kills|throws|slaps|hugs|shakes hands with
+
+
+
+
+
+
+
+
+
+

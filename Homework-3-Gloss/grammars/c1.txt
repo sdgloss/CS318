@@ -1,0 +1,25 @@
+1a -> <Sentence_1>|<Long_Sentence>
+
+1b -> <Animal> <adverb> <location> |<adverb> <Animal> <HxH> |<HxH> <location>
+
+1c -> <HxH> <coke> <celtics>|<coke> <celtics> <HxH>|<celtics> <HxH> <coke>
+
+1d -> <paragraph>
+
+paragraph -> <Sentence_1> <Sentence_2> <Sentence_3>| <Sentence_4> <Sentence_2> <Sentence_3> | <Sentence_1> <Sentence_2> <Sentence_4> |<Sentence_2> <Sentence_1> <Sentence_4>|<Sentence_3> <Sentence_2> <Sentence_1>|<Sentence_2> <Sentence_3> <Sentence_1> 
+
+
+Long_Sentence -> <Animal> is <Sentence_1>
+
+Sentence_1 -> <adverb> through the <location>. 
+Sentence_2 -> <Animal> is similar to Celitc: <celtics>.
+Sentence_3 -> <HxH> likes to drink <coke>.
+Sentence_4 -> <adverb> is a fun word.
+
+location -> $settings.txt
+adverb -> $adverbs.txt
+Animal -> $animals.txt
+HxH -> $HxH.txt
+celtics -> $celtics.txt
+coke -> $coke.txt
+

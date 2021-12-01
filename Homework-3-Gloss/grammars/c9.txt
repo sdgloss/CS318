@@ -1,0 +1,22 @@
+Battle_1 -> <@char1> hits <@char2> with <moves> dealing <damage @damHold2> damage. <hit_type>! | <@char1> hits <@char2> with <moves> dealing <damage @damHold2> damage. <hit_type>! |<@char1> hits <@char2> with <moves> dealing <damage @damHold2> damage. <hit_type>! |<@char1> hits <@char2> with <moves> dealing <damage @damHold2> damage. <hit_type>! | <@char1> uses <moves> and misses! Dealing <miss @damHold2> damage :,(
+Battle_2 -> <@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! | <@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! |<@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! |<@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! |<@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! |<@char2> hits <@char1> with <moves> dealing <damage @damHold1> damage. <hit_type>! | <@char2> uses <moves> and misses! Dealing <miss @damHold1> damage :,(
+
+Start -> <char @char1> and <char @char2> will battle to the death! Let's begin
+
+Faint1 -> <@char1> has run out of health. <@char2> has won! good match!
+
+Faint2 -> <@char2> has run out of health. <@char1> has won! good match!
+
+RemainingHealth1 -> <@char1> has <@rHealth1> health remaining
+RemainingHealth2 -> <@char2> has <@rHealth2> health remaining
+
+
+char -> $street_fighter.txt
+moves -> $wrestling_moves.txt
+miss -> 0
+damage -> 6|7|8|9|10|11|12|13|14|15|16|17|18|19
+hit_type -> Good Hit|Poor Contact|Critical Hit
+damHold1 -> <@damHold1>
+damHold2 -> <@damHold2>
+char1 -> <@char1>
+char2 -> <@char2>

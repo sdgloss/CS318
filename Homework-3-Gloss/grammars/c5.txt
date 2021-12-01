@@ -1,0 +1,33 @@
+
+
+MAIN -> The game is <NAME>, to start, first <PLAYER> should <ACTION>. The winner is the last one left.
+
+PLAYER -> All players|One player selected by <METHOD>|Two players selected by <METHOD>|James
+
+METHOD -> youngest to oldest||furthest one to place they were born|alphabetical order|size of left pinky toe|ability to hold breath longest
+
+ACTION -> say their favorite <MEDIA @m>. The next player decided by <METHOD> should <SAM>. The next player must <SAM> and the pattern continues until one player can't think of one in 60 seconds, that player is eliminated|think of a number from <NUMBER1> to <NUMBER2> The next player decided by <METHOD> should <SAN>, then the first player says their number outloud, if the numbers said <OPERATION> to <NUMBERCONDITION>, the player who initially said theirs outloud survives. If not, the first speaker dies 
+
+OPERATION -> add|multiply|subtract|divide
+
+NUMBERCONDITION -> <CONDITION> <NUMBER1>| <CONDITION> <NUMBER2>|
+
+CONDITION -> less than|greater than|not equal to|
+
+SAM -> say a <@m> who's <ORDER> letter is the same as the previous one
+
+SAN -> say a number|say two numbers
+
+ORDER -> first|last|second
+
+MEDIA -> song|artist|word|book|movie
+
+NUMBER1 -> 1|0|-Infinity
+
+NUMBER2 -> 42|13|+Infinity|Any Number other than even numbers
+
+NAME -> <N> <N>
+
+N -> Zoom|Word|Guess|Who|Fun|Friends
+
+
