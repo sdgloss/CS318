@@ -1,0 +1,32 @@
+action -> plays|horses around|wrestles|cuddles|hugs
+anger -> yells at|scolds|punishes|reprimands|chides
+behavior -> misbehaving|being bad|being rude|not using proper manners|forgetting to say please and thank you
+run -> flees|runs away|slips away|bolts|takes off
+move -> $wrestling_moves.txt
+
+MainCharacterIntro -> <@Protagonist> begins their journey to try and become the best there ever was or die trying. Whether or not <@Protagonist> will win remains to be seen, but let's see what happens!
+
+Catch -> <@Protagonist> and <@Poke> have built up a special relationship and so <@Protagonist> adds a new pokemon to their team!
+
+Feed -> <@Protagonist> feeds <@Poke>|<@Protagonist> gives <@Poke> food| <@Protagonist> sees <@Poke> and gives them some food
+
+PlayWith -> <@Protagonist> <action> with <@Poke>
+
+Train -> <@Protagonist> teaches <@Poke> some new tricks
+
+Pet -> <@Protagonist> pets <@Poke> building their bond
+
+Yell -> <@Protagonist> <anger> <@Poke> for <behavior>
+
+RunAway -> <@Protagonist> <run> from <@Poke>
+
+Fight1 -> <@Train1> and <@Train2> face off in a battle to the death. <@Poke1> and <@Poke2> begin their battle with <@Poke1> hitting <@Poke2> with <move>. <@Poke2> responds with <move>. Both pokemon remain standing. <@Poke1> then strikes <@Poke2> with <move>. Critical hit! <@Poke1> is the victor and <@Poke2> may never recover. 
+
+Fight2 -> <@Train1> and <@Train2> face off in a battle to the death. <@Poke1> and <@Poke2> begin their battle with <@Poke1> hitting <@Poke2> with <move>. <@Poke2> responds with <move>. Both pokemon remain standing. <@Poke1> then strikes <@Poke2> with <move>. <@Poke2> responds with <move>. Critical Hit! <@Poke2> is the victor and <@Poke1> may never recover. 
+
+End -> <@Train1> has won the war with <@Train1.their> faithful companion <@Poke7>. Thus concluding the journey!
+
+OutOfPokemon -> <@Train1> is out of Pokemon and thus they have lost and their journey to the top has ended!
+
+ActualEnd -> A short story by Sam Gloss. 
+

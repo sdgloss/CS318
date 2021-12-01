@@ -1,0 +1,198 @@
+$honestly
+"{Monk1} uses {Ban1} to honestly {Monk2} and his {Ban2}"
+roles:
+Monk1:Monkey
+Monk2:Monkey
+Ban1:Banana
+Ban2:Banana
+preconditions:
+!(Ban1 is eaten)
+(Ban2 is picked up)
+(Ban1 is picked up)
+effects:
+(Ban2 is eaten)
+(Ban2 is hidden)
+(Ban2 is hidden)
+
+$mysteriously
+"{Monk1} uses {Ban1} to mysteriously {Monk2} and his {Ban2}"
+roles:
+Monk1:Monkey
+Monk2:Monkey
+Ban1:Banana
+Ban2:Banana
+preconditions:
+!(Ban2 is eaten)
+!(Ban2 is picked up)
+!(Ban1 is eaten)
+effects:
+(Monk1 has Ban1)
+(Ban1 is eaten)
+(Ban2 is eaten)
+
+$nervously
+"{Monk1} uses {Ban1} to nervously {Monk2} and his {Ban2}"
+roles:
+Monk1:Monkey
+Monk2:Monkey
+Ban1:Banana
+Ban2:Banana
+preconditions:
+(Ban1 is picked up)
+!(Ban2 is eaten)
+(Ban1 is picked up)
+effects:
+!(Ban1 is picked up)
+!(Ban2 is picked up)
+(Ban1 is picked up)
+
+$PickUp
+"{Monk} picks up {Ban}"
+roles:
+  Monk:Monkey
+  Ban:Banana
+preconditions:
+  !(Ban is picked up)
+  !(Monk has Ban)
+  !(Ban is hidden)
+  !(rlyended)
+  !(Ban is eaten)
+effects:
+  (Ban is picked up)
+  (Monk has Ban)
+
+
+$Drop
+"{Monk} drops {Ban}"
+roles:
+  Monk:Monkey
+  Ban:Banana
+preconditions:
+  (Ban is picked up)
+  (Monk has Ban)
+  !(rlyended)
+  !(Ban is eaten)
+effects:
+  !(Ban is picked up)
+  !(Monk has Ban)
+
+$Throw
+"{Monk1} throws {Ban} at {Monk2}"
+roles:
+  Monk1:Monkey
+  Monk2:Monkey
+  Ban:Banana
+preconditions:
+  (Ban is picked up)
+  (Monk1 has Ban)
+  !(rlyended)
+  !(Ban is eaten)
+effects:
+  !(Ban is picked up)
+  !(Monk1 has Ban)
+  (Ban is hidden)
+
+$Eat
+"{Monk} eats {Ban}"
+roles:
+  Monk:Monkey
+  Ban:Banana
+preconditions:
+  (Ban is picked up)
+  (Monk has Ban)
+  (Ban is edible)
+  !(rlyended)
+  !(Ban is eaten)
+effects:
+  !(Ban is picked up)
+  !(Monk has Ban)
+  (Ban is eaten)
+
+$Hide
+"{Monk} hides {Ban}"
+roles:
+  Monk:Monkey
+  Ban:Banana
+preconditions:
+  (Ban is picked up)
+  (Monk has Ban)
+  !(rlyended)
+  !(Ban is eaten)
+effects:
+  !(Ban is picked up)
+  !(Monk has Ban)
+  (Ban is hidden)
+
+$Trade
+"{Monk1} trades {Ban1} with {Monk2}"
+roles:
+  Monk1:Monkey
+  Monk2:Monkey
+  Ban1:Banana
+preconditions:
+  (Ban1 is picked up)
+  (Monk1 has Ban1)
+  !(Ban1 is eaten)
+  !(rlyended)
+effects:
+  !(Monk1 has Ban1)
+  (Monk2 has Ban1)
+
+
+
+
+$ClimbUp 
+"{Monk} climbs up Tree"
+roles:
+  Monk:Monkey
+preconditions:
+  (Monk is on the ground)
+  !(rlyended)
+effects:
+  (Monk is on the tree)
+  !(Monk is on the ground)
+
+
+$ClimbDown 
+"{Monk} climbs down from Tree"
+roles:
+  Monk:Monkey
+preconditions:
+  !(Monk is on the ground)
+  !(rlyended)
+effects:
+  !(Monk is on the tree)
+  (Monk is on the ground)
+
+$End
+"All the Food and Toys are gone :(" 
+roles:
+  Ban1:Banana
+  Ban2:Banana
+  Ban3:Banana
+  Ban4:Banana
+  Ban5:Banana
+  Ban6:Banana
+  Ban7:Banana
+  Ban8:Banana
+preconditions:
+  !(rlyended)
+  (Ban1 is eaten)/(Ban1 is hidden)
+  (Ban2 is eaten)/(Ban2 is hidden)
+  (Ban3 is eaten)/(Ban3 is hidden)
+  (Ban4 is eaten)/(Ban4 is hidden)
+  (Ban5 is eaten)/(Ban5 is hidden)
+  (Ban6 is eaten)/(Ban6 is hidden)
+  (Ban7 is eaten)/(Ban7 is hidden)
+  (Ban8 is eaten)/(Ban8 is hidden)
+effects:
+  (rlyended)
+
+$ActualEnd
+"The End"
+preconditions:
+  (rlyended)
+
+
+
+

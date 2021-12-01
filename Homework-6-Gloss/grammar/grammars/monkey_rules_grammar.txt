@@ -1,0 +1,16 @@
+MonkeyRule -> <Title>/n<Text>/nroles:/n<Roles>/npreconditions:/n<Preconditions>/n<Preconditions>/n<Preconditions>/neffects:/n<Effects>/n<Effects>/n<Effects>
+
+Title ->%<Action @action> 
+
+
+Text -> "{Monk1} uses {Ban1} to <@action> {Monk2} and his {Ban2}"
+Roles->Monk1:Monkey/nMonk2:Monkey/nBan1:Banana/nBan2:Banana
+Preconditions -> (Monk1 has Ban1)|(Monk2 has Ban2)|!(rlyended)|!(Ban1 is eaten)|!(Ban2 is eaten)|!(Ban1 is <@action>)|!(Ban2 is <@action>)|!(Ban1 is picked up)|!(Ban2 is picked up)|(Ban1 is hidden)|(Ban2 is hidden)|!(Monk1 has Ban1)|!(Monk2 has Ban2)|(Ban1 is picked up)|(Ban2 is picked up)
+
+Effects -> (Monk1 has Ban1)|(Monk2 has Ban2)|(Ban1 is eaten)|(Ban2 is eaten)|(Ban1 is <@action>)|(Ban2 is <@action>)|!(Ban1 is picked up)|!(Ban2 is picked up)|(Ban1 is hidden)|(Ban2 is hidden)|!(Monk1 has Ban1)|!(Monk2 has Ban2)|(Ban1 is picked up)|(Ban2 is picked up)|!(Ban1 is hidden)|!(Ban2 is hidden)
+
+
+
+
+
+Action -> $adverbs.txt

@@ -1,0 +1,37 @@
+DET -> the|a|every|an|not every|some
+NOUN -> <CORPUS_NOUN>|moon|sun|doctor|planet|raindrop|clown|man|woman|person|city
+CORPUS_NOUN -> $nouns.txt
+VERB -> <MOVEMENT_VERB>|<SPEECH_VERB>
+MOVEMENT_VERB -> walks|bikes|runs
+SPEECH_VERB -> screams|talks|speaks|whispers
+ADJ -> green|fast|orange|angry|happy|sad
+ADV -> $adverbs.txt
+PREP -> to|under|with|over|aside
+PREP -> aside, under, and beneath|around
+
+
+MainCharacterIntro -> <@Protagonist> is the main character of this story. Truly, <@Protagonist.they> is!
+
+Talk -> <@Initiator> <SPEECH_VERB> to <@Recipient>, causing <@Recipient.them> to feel <ADJ>. <LOCATION_DESCRIPTION>
+Move -> <@Mover> doesn't want to be in <@Origin> anymore, so <@Mover.they> <MOVEMENT_VERB> <ADV> to <@Destination>.
+Insult -> <@Insulter> insulted <@Insulted> by calling <@Insulted.them> <ADJ>. <LOCATION_DESCRIPTION>
+Compliment -> <@Initiator> was nice to <@Recipient>, calling <@Recipient.them> <ADJ>. <LOCATION_DESCRIPTION>
+Thank -> Meanwhile, at <@Location>, <@Initiator> <ADV> thanked <@Recipient> for a past 
+Cry -> <@SadCharacter> <cried>!
+FeelBetter -> <@SadCharacter> started to feel a lot better.
+Apologize -> <@Apologizer> said sorry to <@Recipient>.
+AcceptApology  -> <@Accepter.they> accepted <@Apologizer.their> apology.
+RejectApology -> <@Accepter.they> rejected <@Apologizer.their> apology.
+Gossip -> <@Gossiper> gossipped to <@Recipient>. <@Gossiper.they> said, "<@Action>".
+PickUp -> <@Initiator> picked something up: <@Item>.
+Throw -> <ADV>, at <@Location>, <@Initiator> threw <@Item>.
+WriteNote -> <@Writer> wrote a note. It reads, "<@Action>".
+ReadNote -> <@Reader> read a note with <ADJ> interest. It reads, "<@Action>".
+Slap -> <@Slapper> <ADV> slapped <@Slapped> at <@Location>. "Don't you remember? '<@Action>'"
+
+LOCATION_DESCRIPTION -> <This all happened at> <@Location>.
+
+This all happened at -> This all happened at|This went down at|This occurred at|This was at
+cried -> cried|bawled|teared up
+
+

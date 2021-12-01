@@ -1,0 +1,86 @@
+	<BEGIN ENTITIES>
+
+Alice:Character
+Bob:Character
+Jose:Character
+Chandra:Character
+Jeff:Character
+Eileen:Character
+Alice's House:Location
+Bar:Location
+
+# Now, we can define attributes! The syntax is straightforward.
+
+Alice.they = she
+Alice.them = her
+Alice.their = her
+Alice.theirs = hers
+Alice.themself = herself
+
+Bob.they = he
+Bob.them = him
+Bob.their = his
+Bob.theirs = his
+Bob.themself = himself
+
+Jose.they = he
+Jose.them = him
+Jose.their = his
+Jose.theirs = his
+Jose.themself = himself
+
+Chandra.they = she
+Chandra.them = her
+Chandra.their = her
+Chandra.theirs = hers
+Chandra.themself = herself
+
+Jeff.they = he
+Jeff.them = him
+Jeff.their = his
+Jeff.theirs = his
+Jeff.themself = himself
+
+Eileen.they = she
+Eileen.them = her
+Eileen.their = her
+Eileen.theirs = hers
+Eileen.themself = herself
+
+Bar.they = it
+Bar.them = it
+Bar.their = its
+Bar.theirs = its
+Bar.themself = itself
+
+Alice's House.they = it
+Alice's House.them = it
+Alice's House.their = its
+Alice's House.theirs = its
+Alice's House.themself = itself
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+
+<Alice> is at <Alice's House>
+<Bob> is at <Bar>
+<Chandra> is at <Bar>
+<Jose> is at <Bar>
+<Jose> knows <Chandra>
+<Jose> knows <Bob>
+<Jose> knows <Alice>
+<Alice> knows <Jose>
+<Alice> knows <Bob>
+<Bob> is mean
+<Alice> dislikes <Jose>
+<Alice> dislikes <Bob>
+<Alice> is mean
+<Jose> is friendly
+<Jose> loves Chandra
+<Chandra> is friendly
+<Chandra> loves Bob
+<Jose> is outgoing
+<Jeff> is outgoing
+
+	<END FACTS>

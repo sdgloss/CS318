@@ -1,0 +1,161 @@
+$Catch
+"{Train} catches {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Train has pokemon)
+  !(Poke is owned)
+  !(Poke is dead)
+  (Poke likes Train)
+effects:
+  (Train has pokemon)
+  (Poke is owned)
+  (Train owns Poke)
+
+$Feed
+"{Train} feeds {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke likes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke is okayWith Train) else (Poke likes Train)
+
+$PlayWith
+"{Train} plays with {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke likes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke is okayWith Train) else (Poke likes Train)
+
+$Train
+"{Train} trains {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke likes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke is okayWith Train) else (Poke likes Train)
+
+$Pet 
+"{Train} pets {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke likes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke is okayWith Train) else (Poke likes Train)
+
+$Yell
+"{Train} yells at {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke dislikes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke okayWith Train) else (Poke dislikes Train)
+
+$RunAway
+"{Train} runs away from {Poke}"
+roles:
+  Train:Trainer
+  Poke:Pokemon
+preconditions:
+  !(Poke is owned)
+  !(Poke is dead)
+  !(Poke dislikes Train)
+effects:
+  (Poke is okayWith Train) if !(Poke is okayWith Train) else (Poke dislikes Train)
+
+
+$Fight1
+"{Train1} using {Poke1} fights {Train2} using {Poke2}. {Poke1} wins and thus {Poke2} dies." 
+roles:
+  Train1:Trainer
+  Train2:Trainer
+  Poke1:Pokemon
+  Poke2:Pokemon
+preconditions:
+  (Train1 owns Poke1)
+  (Train2 owns Poke2)
+effects:
+  !(Train2 owns Poke2)
+  !(Train2 has pokemon)
+  (Poke2 is dead)
+$Fight2
+"{Train1} using {Poke1} fights {Train2} using {Poke2}. {Poke2} wins and thus {Poke1} dies." 
+roles:
+  Train1:Trainer
+  Train2:Trainer
+  Poke1:Pokemon
+  Poke2:Pokemon
+preconditions:
+  (Train1 owns Poke1)
+  (Train2 owns Poke2)
+effects:
+  !(Train1 owns Poke1)
+  !(Train1 has pokemon)
+  (Poke1 is dead)
+
+$OutOfPokemon
+"{Train1} is out"
+roles:
+  Poke1:Pokemon
+  Poke2:Pokemon
+  Poke3:Pokemon
+  Poke4:Pokemon
+  Poke5:Pokemon
+  Poke6:Pokemon
+  Poke7:Pokemon
+  Train1:Trainer
+preconditions:
+  !(rlyended)
+  (Poke1 is dead)/(Poke1 is owned)
+  (Poke2 is dead)/(Poke2 is owned)
+  (Poke3 is dead)/(Poke3 is owned)
+  (Poke4 is dead)/(Poke4 is owned)
+  (Poke5 is dead)/(Poke5 is owned)
+  (Poke6 is dead)/(Poke6 is owned)
+  (Poke7 is dead)/(Poke7 is owned)
+  !(Train1 has pokemon)
+  !(Train1 is out)
+effects:
+  (Train1 is out)
+
+$End
+"All the Pokemon are dead except {Poke7}. Thus {Train1} is the winner of the free for all!" 
+roles:
+  Poke7:Pokemon
+  Train1:Trainer
+  Train2:Trainer
+  Train3:Trainer
+preconditions:
+  !(rlyended)
+  (Train1 owns Poke7)
+  (Train2 is out)
+  (Train3 is out)
+effects:
+  (rlyended)
+
+$ActualEnd
+"The End"
+preconditions:
+  (rlyended)

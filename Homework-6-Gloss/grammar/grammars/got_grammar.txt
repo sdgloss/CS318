@@ -1,0 +1,51 @@
+DET -> the|a|every|an|not every|some
+NOUN -> <CORPUS_NOUN>|moon|sun|doctor|planet|raindrop|clown|man|woman|person|city
+CORPUS_NOUN -> $nouns.txt
+MOVEMENT_VERB -> walks slowly|saunters happily|runs quickly|sneaks discretely|strides|takes a stroll
+SPEECH_VERB -> screams|talks|speaks|whispers
+ADJ -> green|fast|orange|angry|happy|sad
+ADV -> $adverbs.txt
+PREP -> to|under|with|over|aside
+PREP -> aside, under, and beneath|around
+HIDING_SPOT -> under something|behind something|in plain sight|out of sight
+ACTION -> writes a letter to Bran|reads of recent events in Winterfell|ponders the coming winter|rests her legs|takes a short break|confers with her guard|confers with an emissary
+TIME_PASS -> After some time|Then|Next|Suddenly|After|Upon hearing a bird's call
+
+
+MainCharacterIntro -> One dark night in Winterfell, Theon, Ramsey, Jon, Arya and Sansa, and Petyr all convened to discuss the future of the North. Little did they know, personal vendettas would get in the way...
+
+Move -> <@Mover> <ACTION> at <@Origin>. <TIME_PASS>, <@Mover.they> <MOVEMENT_VERB> to <@Destination>.
+
+MoveOther -> Sansa watches as <@Mover> comes into <@Destination> with her.|<@Mover> joins Sansa in <@Destination>
+
+Unhide -> Sneakily, <@Char> leaves <@Char.their> hiding spot in <@Loc>
+
+Hide ->  <@Char> hides <HIDING_SPOT> in the <@Loc>.
+
+Search -> <@Char> chooses to search the <@Loc>. They find the <@Weap>, and choose to pick it up.
+
+Detection -> <@Char> enters <@Loc0> only to be assaulted by the horror of finding a prone <@Body> in a puddle of <@Body.their> own blood as the red liquid still gradually seeped into <@Body.their> clothing. There was a murder.
+
+CallMeeting -> Having found a dead body, <@Char> decides to call a meeting. Everyone meets up in the Greathall
+
+StateFacts -> <@C1> says they found the body at <@Loc>. An evaluation by Maester Luwin indicates the murder was committed with the <@Weap>
+
+AccuseLoc -> <@C1> says <@C1.they> remembers seeing <@C2> at <@Loc> with <@Victim>. 
+
+AccuseWeap -> <@C1> says <@C1.they> remembers seeing <@C2> pick up <@Weap>. 
+
+Condemn -> Sansa in her power as Lady of Winterfell decides <@C1> is the murderer and orders <@C1.them> to death.
+
+LiePos -> <@C1> has no idea who the culprit may be, but they do say they think that <@C2> is innocent.| <@C1> proclaims that <@C2> is completely innocent.|<@C1> says <@C1.they> doubts <@C2> to be capable of murder.
+
+LieNeg -> <@C1> is confident that <@C2> is the culprit.|<@C1> says that they would guess that <@C2> is capable of murder.|<@C1> makes it clear that they think <@C2> is a bad person.|<@C1> vocalizes suspicion that <@C2> was the murderer.
+
+Confess -> Right before the execution, <@C1> confesses to the murder, sparing <@C2>'s life. 
+
+End1 -> No one will ever be sure what the events of that night in Winterfell were, although one thing Bran knew for sure. <@C1> was the true culprit. 
+
+End2 -> Upon his arrival at Winterfell, with his newfound powers as the all-seeing Three Eyed Raven, Bran revealed that <@Murder> was indeed the murderer. 
+
+ActualEnd -> A story by Jack, Sam and Aldo
+
+Kill -> C

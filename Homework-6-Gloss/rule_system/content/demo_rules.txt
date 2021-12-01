@@ -1,0 +1,374 @@
+# This is a comment. As in past code, here it's any line beginning
+# with a '#'. Blank lines are also ignored.
+
+
+# This is the "action name", i.e., the name of the action associated with
+# this rule ("Move"). It has to be preceded by a dollar sign.
+
+$Move
+
+
+# You can put ' debug' at the end of one of these lines to turn on
+# debugging printout for attempts to execute this rule. Another good
+# way to debug a specific rule is to call RuleEngine.debug() -- see
+# the example in main.py.
+
+# $Move debug
+
+
+# This is the "action string". Whenever an action occurs, this string
+# will be filled in to print out a simple representation of the action.
+# Next week, we'll hook up the rule engine with the grammar engine to
+# enable really powerful simulation + text generation.
+
+"{Mover} goes to {Destination}"
+
+
+# This is the probability that this action will occur if all of its
+# preconditions hold for some binding (more on that below). That is,
+# if everything holds, this action will have a 10% chance of occurring.
+
+prob: 0.1
+
+
+# The "roles" for an action represent all the different entities to
+# which the action pertains. Each role declaration has two pars, separated
+# by a colon. The first part is the variable name for the role; this variable
+# can be reused in the precondtions and effects (see below). The second part
+# is the entity type for the role; it specifies what type of entity can fill
+# the role. For instance, the "Mover" role here can only be played by a character.
+# See "demo_domain.txt" for the definition of entities in this "domain". Note that
+# an entity can't be cast into multiple roles for a given action.
+
+roles:
+	Mover:Character
+	Origin:Location
+	Destination:Location
+	# The leading question mark here means this role is optional (it can be bound zero or one times)
+	?Witness:Character
+
+
+# The preconditions for a rule hold in order for the rule to "fire" (i.e., be executed).
+# More specifically, these preconditions must hold for some particular "binding" of the
+# rule, which means a particular set of domain entities cast into the various rules that
+# are referenced in the preconditions. When the rule engine is evaluating a rule, it will
+# potentially try out all possible bindings before giving up on the rule. If it finds
+# a set of bindings for which the preconditions hold, the rule is "triggered", which means
+# that it will then "fire" (have its effects executed). For a precondition to hold, an
+# associated "fact" must exist in the rule engine's "working memory", which is a set of
+# facts about the current state of the domain that the rule system is evolving. For instance,
+# if the rule engine is evaluating the precondition "(Mover is at Origin)" with the binding
+# {Mover=Alice, Origin=Bar}, then the precondition will only hold if there is a fact in the
+# working memory of the form "Alice is at Bar". Any of the roles defined above can be
+# referenced in the preconditions.
+
+preconditions:
+	(Mover is at Origin)
+  # The '!' here is a negation sign. It means that the precondition that follows must *not*
+  # be true in order to "hold".
+	!(Mover is at Destination)
+	(Witness is at Destination)
+
+
+# The effects of an action specify what will change about the domain if the associated
+# rule fires. These changes are specifically expressed as facts that should be added to
+# the working memory (or deleted from it). Any of the roles defined above can be used in
+# the effects.
+
+effects:
+	(Mover is at Destination)
+  # In the context of an effect, the leading '!' means that the fact should be deleted
+  # from the working memory.
+  !(Mover is at Origin)
+	# The '*:' prefix specifies a "macro role". In this case, it will creates individual
+	# effects '[Role] knows about This' for all Character roles in the rule.
+	(*:Character knows about This)
+
+
+$Talk
+"{Initiator} talks to {Recipient}"
+roles:
+	Initiator:Character
+	Recipient:Character
+	Location:Location
+	?Witness:Character
+preconditions:
+  # These must have corresponding "facts" in the "working memory"
+	(*:Character is at Location)
+	(Initiator knows Recipient) / (Initiator is outgoing)
+effects:
+	(Initiator talks to Recipient)
+	(Initiator knows Recipient)
+	(Recipient talks to Initiator)
+	(Recipient knows Initiator)
+	(*:Character knows about This)
+
+
+$Insult
+"{Insulter} insults {Insulted}"
+roles:
+	Insulter:Character
+	Insulted:Character
+	Location:Location
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Insulter mean) / (Insulter dislikes Insulted)
+effects:
+	(Insulter insults Insulted)
+	(Insulted dislikes Insulter)
+	(Insulter hurt Insulted)
+	(Insulted is sad)
+	(Insulted is mad at Insulter)
+	(This is mean)
+	(This is interesting)
+	(This hurt Insulted)
+	(Insulter did This)
+	(*:Character knows about This)
+
+
+$Compliment
+"{Initiator} compliments {Recipient}"
+roles:
+	Initiator:Character
+	Recipient:Character
+	Location:Location
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Initiator is friendly) / (Initiator likes Recipient)
+effects:
+	!(Initiator is sad)
+	!(Recipient is sad)
+	!(Recipient is mad at Initiator)
+	(This helped Recipient)
+	(This is nice)
+	(Initiator did This)
+	(*:Character knows about This)
+
+
+$Thank
+"{Initiator} thanks {Recipient} for {Action}"
+roles:
+	Initiator:Character
+	Recipient:Character
+	Action:Action
+	Location:Location
+	?Witness:Character
+preconditions:
+	(Action helped Initiator)
+	(Recipient did Action)
+	(*:Character is at Location)
+	# You can use the Kleene star (wildcard character standing in for zero
+	# or more of any character) in your preconditions. Try commenting this
+	# line to see how recursive the thanking can get!
+	(Recipient thanks Initiator * thanks *)
+effects:
+	(This helped Recipient)
+	(This is nice)
+	(Initiator did This)
+	(*:Character knows about This)
+
+
+$Cry
+"{SadCharacter} cries over {Action}"
+roles:
+	SadCharacter:Character
+	Action:Action
+	Location:Location
+	?Witness:Character
+preconditions:
+	(Action hurt SadCharacter)
+	(SadCharacter is sad)
+	(*:Character is at Location)
+effects:
+	(This is interesting)
+	(*:Character knows about This)
+
+
+$FeelBetter
+"{SadCharacter} feels better"
+roles:
+	SadCharacter:Character
+preconditions:
+	(SadCharacter is sad)
+effects:
+	!(SadCharacter is sad)
+	(*:Character knows about This)
+
+
+$Slap
+"{Slapper} slaps {Slapped} over {Action}"
+roles:
+	Slapper:Character
+	Slapped:Character
+	Location:Location
+	Action:Action
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Slapper is mad at Slapped)
+	(Slapped did Action)
+	(Action hurt Slapper)
+effects:
+	(Slapper slapped Slapped)
+	(Slapper hurt Slapped)
+	!(Slapper is mad at Slapped)
+	(Slapped is mad at Slapper)
+	(This is interesting)
+	(*:Character knows about This)
+
+
+$Apologize
+"{Apologizer} apologizes to {Recipient} for {Action}"
+roles:
+	Apologizer:Character
+	Recipient:Character
+	Location:Location
+	Action:Action
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Apologizer did Action)
+	(Action hurt Recipient)
+effects:
+	(Apologizer apologized to Recipient for Action)
+	(This is interesting)
+	(*:Character knows about This)
+responses:
+	AcceptApology(Apologizer=Apologizer, Accepter=Recipient, Action=This, Location=Location)
+  RejectApology(Apologizer=Apologizer, Rejecter=Recipient, Action=This, Location=Location)
+
+
+$AcceptApology (response)
+"{Accepter} accepts {Apologizer}'s apology"
+prob:0.95
+roles:
+	Accepter:Character
+	Apologizer:Character
+	Action:Action
+	Location:Location
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Accepter is forgiving)
+effects:
+	(*:Character knows about This)
+
+
+$RejectApology (response)
+"{Rejecter} rejects {Apologizer}'s apology"
+roles:
+	Rejecter:Character
+	Apologizer:Character
+	Action:Action
+	Location:Location
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Rejecter is forgiving)
+	(Rejecter is not mad at forgiving)
+effects:
+	(Rejecter hurt Apologizer) if !(Apologizer is forgiving) else ()
+	(Apologizer is mad at Rejecter) if !(Apologizer is forgiving) else ()
+	(Apologizer is sad)
+	(This is interesting)
+	(*:Character knows about This)
+
+
+$Gossip
+"{Gossiper} gossips to {Recipient} about {Action}"
+roles:
+	Gossiper:Character
+	Recipient:Character
+	Action:Action
+	Location:Location
+	?Witness:Character
+preconditions:
+	(*:Character is at Location)
+	(Action is interesting)
+	(Gossiper knows about Action)
+	!(Gossiper did Action)
+	!(Recipient did Action)
+	!(Recipient knows about Action)
+	!(Action embarrasses Gossiper)
+	!(Action embarrasses Recipient)
+effects:
+	(This is interesting)
+	(*:Character knows about This)
+	(*:Character knows about Action)
+
+
+$PickUp
+"{Initiator} picks up {Item}"
+roles:
+	Initiator:Character
+	Item:Prop
+	Location:Location
+preconditions:
+	(Initiator is at Location)
+	(Item is at Location)
+	!(Item is being held)
+    !(Initiator is holding something)
+effects:
+	(Initiator is holding something)
+	(Item is being held)
+    (Initiator is holding Item)
+
+
+$Throw
+"{Initiator} throws {Item}"
+roles:
+	Initiator:Character
+	Item:Prop
+	Location:Location
+preconditions:
+	(Initiator is at Location)
+	(Initiator is holding Item)
+effects:
+	!(Initiator is holding something)
+	!(Item is being held)
+    !(Initiator is holding Item)
+    (Item is at Location)
+
+
+$WriteNote
+"{Writer} writes {Note} about {Action}"
+prob: 0.3
+roles:
+	Writer:Character
+	# The plus sign here indicates that a new entity of the
+	# type "Prop" should be created and automatically bound
+	# to this Note role, should the rule fire. This new entity
+	# will be named {Writer}'s Note -- e.g., if Writer is named
+	# Alice, this new Prop will be named Alice's Note. If there's
+	# already an entity with that name, it will automatically be
+	# renamed to Alice's Note (2), and so forth.
+	+Note={Writer}'s note:Prop
+	Location:Location
+	Action:Action
+preconditions:
+	(Writer is at Location)
+	(Action is interesting)
+	(Writer knows about Action)
+effects:
+	(Writer wrote Note)
+	(Note is at Location)
+	(Note is about Action)
+
+$ReadNote
+"{Reader} reads {Note} about {Action}"
+prob: 0.5
+roles:
+	Reader:Character
+	Note:Prop
+	Location:Location
+	Action:Action
+preconditions:
+	(Reader is at Location)
+	(Note is at Location)
+	!(Reader wrote Note)
+	(Note is about Action)
+effects:
+    # Knowledge propagation!
+	(Reader knows about Action)

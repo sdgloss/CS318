@@ -1,0 +1,7 @@
+Monkey -> <monk @Monkey>
+monk -> $monkey_names.txt
+Food -> <fruit @Food>
+fruit -> $fruits.txt
+Objects -> $toys.txt
+Location -> is on the ground| is on the tree
+Edible -> is edible

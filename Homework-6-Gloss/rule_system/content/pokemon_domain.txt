@@ -1,0 +1,42 @@
+	<BEGIN ENTITIES>
+Ash:Trainer
+Misty:Trainer
+Brock:Trainer
+Pikachu:Pokemon
+Charmander:Pokemon
+Squirtle:Pokemon
+Bulbasaur:Pokemon
+Ho-oh:Pokemon
+Mew:Pokemon
+Mewtwo:Pokemon
+
+Ash.their = his
+Misty.their = her
+Brock.their = his
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+<Pikachu> dislikes <Ash>
+<Charmander> dislikes <Ash>
+<Squirtle> dislikes <Ash>
+<Bulbasaur> dislikes <Ash>
+<Ho-oh> dislikes <Ash>
+<Mew> dislikes <Ash>
+<Mewtwo> dislikes <Ash>
+<Pikachu> dislikes <Misty>
+<Charmander> dislikes <Misty>
+<Squirtle> dislikes <Misty>
+<Bulbasaur> dislikes <Misty>
+<Ho-oh> dislikes <Misty>
+<Mew> dislikes <Misty>
+<Mewtwo> dislikes <Misty>
+<Pikachu> dislikes <Brock>
+<Charmander> dislikes <Brock>
+<Squirtle> dislikes <Brock>
+<Bulbasaur> dislikes <Brock>
+<Ho-oh> dislikes <Brock>
+<Mew> dislikes <Brock>
+<Mewtwo> dislikes <Brock>
+
+	<END FACTS>
