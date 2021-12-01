@@ -1,0 +1,11 @@
+##Sorry this is raw but I put in 30 hours and fixing every bug was really hard. I hope you enjoy the game how ever flawed it may be. 
+
+
+#if you choose to shoot in the ghost town before the hidden room is unlocked, the game just crashes
+
+#have to run the execute twice. otherwise it sometimes doesn't load everything. its a weird glitch
+
+#inventory does not work well
+#there used to be a dragon but he died
+
+#sometimes you have to enter shoot a couple times before the ending decides to run

@@ -1,0 +1,81 @@
+
+$FightWinDrawBridge
+"Hero Beats Troll"
+roles:
+  Hero:Character
+  Weap:Weapon
+  Weap2:Weapon
+  Boz:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Hero has equipped Weap)
+  (Boz is troll)
+  (Boz is weak to Weap)
+  (Boz is alive)
+  (Boz has Weap2)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Loc2 is sands)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Boz is alive)
+  !(Hero does not have Weap2)
+  !(Hero wants to fight)
+  (Hero has Weap2)
+  (Hero is waiting)
+  !(Loc2 is not travelable)
+  !(waiting)
+
+$FightLossDrawBridge
+"Hero loses to Troll"
+roles:
+  Hero:Character
+  Weap:Weapon
+  Boz:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Boz is troll)
+  (Hero has equipped Weap)
+  !(Boz is weak to Weap)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Loc2 is brothel)
+  (Hero is at Loc)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to fight)
+  (Hero is waiting)
+  (Hero is at Loc2)
+  !(Hero is at Loc)
+  !(waiting)
+
+$ExamineDrawBridge debug
+"Hero examines Troll"
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+preconditions:
+  (Loc is draw bridge)
+  (Boz is troll)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Waiting Screen
+$Waiting debug
+"Please make your next move"
+roles:
+  Hero:Character
+preconditions:
+  (Hero is waiting)

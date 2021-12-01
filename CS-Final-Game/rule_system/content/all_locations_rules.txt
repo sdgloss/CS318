@@ -1,0 +1,921 @@
+#Brothel
+
+$Hint1
+"You need to cross the bridge to continue. I hear the weapons the creatures drop can help with that"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Loc:Location
+preconditions:
+  (Boz1 is troll)
+  (Boz1 is alive)
+  (Loc is brothel)
+  (Hero is at Loc)
+  (Hero wants to hint)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint2
+"I hear the poisoned fog can be crossed with a certain throwing weapon"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Boz1 is troll)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  (Boz2 is alive)
+  (Loc2 is brothel)
+  (Hero is at Loc2)
+  (Hero wants to hint)
+  (Loc is library)
+  !(Loc is travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint3
+"I hear the ghost town has hidden secrets. Even a weapon which is good for killing"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Boz1 is troll)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  (Boz2 is alive)
+  (Loc2 is brothel)
+  (Hero is at Loc2)
+  (Hero wants to hint)
+  (Loc is library)
+  (Loc is travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint4
+"I hear the Owl was hiding a secret to freeing us from the monsters"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loz:Area
+  Loc:Location
+preconditions:
+  (Boz1 is troll)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  !(Boz2 is alive)
+  (Loc is brothel)
+  (Hero is at Loc)
+  (Hero wants to hint)
+  (Loz is hidden)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint5
+"There has been some odd noises coming from the ghost towns. I'm scared to check it out"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loz:Area
+  Loc:Location
+preconditions:
+  (Boz1 is troll)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  !(Boz2 is alive)
+  (Loc is brothel)
+  (Hero is at Loc)
+  (Hero wants to hint)
+  !(Loz is hidden)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint6
+"I hear that a certain sword can part the sea. It requires a combination of acquisition of cleaning. Maybe some of the wild animals are hiding"
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loz:Area
+  Loc1:Location
+  Loc2:Location
+preconditions:
+  (Boz1 is troll)
+  (Loc2 is brothel)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  !(Boz2 is alive)
+  (Hero is at Loc2)
+  (Hero wants to hint)
+  !(Loz is hidden)
+  (Loc1 is volcano)
+  (Loc1 is not travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+$Hint7
+"I hear there was once a great sword that protected the land from the dragons but now it is lost."
+roles:
+  Hero:Character
+  Boz1:Boss
+  Boz2:Boss
+  Loz:Area
+  Loc1:Location
+  Loc2:Location
+preconditions:
+  (Boz1 is troll)
+  !(Boz1 is alive)
+  (Boz2 is owl)
+  !(Boz2 is alive)
+  (Loc2 is brothel)
+  (Hero is at Loc2)
+  (Hero wants to hint)
+  !(Loz is hidden)
+  (Loc1 is great sea)
+  (Loc1 is travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to hint)
+  !(waiting)
+
+#Draw bridge
+$FightWinDrawBridge
+"Hero Beats Troll and acquires {Weap2}"
+roles:
+  Hero:Character
+  Weap:Weapon
+  Weap2:Weapon
+  Boz:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Hero has equipped Weap)
+  (Boz is troll)
+  (Boz is weak to Weap)
+  (Boz is alive)
+  (Boz has Weap2)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Loc2 is sands)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Boz is alive)
+  !(Hero does not have Weap2)
+  !(Hero wants to fight)
+  (Hero has Weap2)
+  (Hero is waiting)
+  !(Loc2 is not travelable)
+  !(waiting)
+
+$FightLossDrawBridge
+"Hero loses to Troll and is sent back to the Brothel where he is nursed back to health"
+roles:
+  Hero:Character
+  Weap:Weapon
+  Boz:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Boz is troll)
+  (Hero has equipped Weap)
+  !(Boz is weak to Weap)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Loc2 is brothel)
+  (Hero is at Loc)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to fight)
+  (Hero is waiting)
+  (Hero is at Loc2)
+  !(Hero is at Loc)
+  !(waiting)
+
+$ExamineDrawBridge
+"Hero examines Troll. He notices the troll is well built to defend long ranged attacks but his against a knife, he may not do so well"
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+preconditions:
+  (Loc is draw bridge)
+  (Boz is troll)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#GhostTown
+
+$Examine1GhostTown
+"Hero Examines Room. Finds dusty darts"
+roles:
+  Hero:Character
+  Loz:Area
+  Weap:Weapon
+  Loc:Location
+preconditions:
+  (Weap is dusty darts)
+  (Loc is ghost town)
+  (Hero is at Loc)
+  (Loz is hidden)
+  (Hero wants to examine)
+  (Hero does not have Weap)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to examine)
+  (Hero is waiting)
+  (Hero has Weap)
+  !(Hero does not have Weap)
+  !(waiting)
+
+$Examine2GhostTown
+"Hero Examines Room. Notices the scortch on the walls and remember the stories of how they say the ghost town was the first city to fall when the dragons crossed the sea and took over"
+roles:
+  Hero:Character
+  Loz:Area
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Weap is dusty darts)
+  (Hero is at Loc)
+  (Loc is ghost town)
+  (Loz is hidden)
+  (Hero wants to examine)
+  (Hero has Weap)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to examine)
+  (Hero is waiting)
+  !(waiting)
+
+$Examine3GhostTown
+"Hero Examines Room. Notices that a dart board has appeared"
+roles:
+  Hero:Character
+  Loz:Area
+  Loc:Location
+preconditions:
+  (Hero is at Loc)
+  (Loc is ghost town)
+  !(Loz is hidden)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to examine)
+  (Hero is waiting)
+  !(waiting)
+
+$Examine4GhostTown
+"Hero Examines Room. Maybe this weapon has something to do with the Dragon?"
+roles:
+  Hero:Character
+  Loz:Area
+  Weap:Weapon
+  Loc:Location
+preconditions:
+  (Loc is ghost town)
+  (Hero is at Loc)
+  !(Loz is hidden)
+  (Hero wants to examine)
+  (Weap is broad sword of justice)
+  (Hero has Weap)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to examine)
+  (Hero is waiting)
+  !(waiting)
+
+$DartBoardGhostTown
+"Hero Shoots the Darts at the Dart Board. He hits a bullseye and all the sudden a massive sword drops. You realize it is the sword needed to beat the Dragon. You have once again restored hope for the people and to the land."
+roles:
+  Hero:Character
+  Loz:Area
+  Weap1:Weapon
+  Weap2:Weapon
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Loc is ghost town)
+  (Loc2 is plains)
+  (Loc2 is not travelable)
+  (Hero is at Loc)
+  (Hero wants to shoot)
+  !(Loz is hidden)
+  (Weap1 is dusty darts)
+  (Weap2 is broad sword of justice)
+  (Hero has Weap1)
+  (Hero does not have Weap2)
+  !(Hero is waiting)
+effects:
+  (end1)
+
+#Grass
+$Fight1Grass 
+"Hero fights Hyena. Hero wins. Hyena drops Knasty Knife."
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is grass)
+  (Hero is at Loc)
+  (Weap is knasty knife)
+  (Hero does not have Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  (Hero has Weap)
+  !(Hero does not have Weap)
+  !(waiting)
+
+$Fight2Grass
+"Hero fights Hyena. Hero wins."
+roles:
+  Hero:Character
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is grass)
+  (Hero is at Loc)
+  (Weap is knasty knife)
+  (Hero has Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  !(waiting)
+
+$ExamineGrass
+"Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse."
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is grass)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Great Sea
+$Examine1GreatSea
+"You examine the area. Maybe a weapon can shine the way through"
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is great sea)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+$Throw1GreatSea
+"You throw the Sparkling Sword into the sky, it catches the sun light and all of the sudden the sea parts."
+roles:
+  Hero:Character
+  Loc:Location
+  Loc2:Location
+  Weap:Weapon 
+preconditions:
+  (Loc is great sea)
+  (Hero is at Loc)
+  (Loc2 is volcano)
+  (Hero wants to throw)
+  (Loc2 is not travelable)
+  (Weap is sparkling sword)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+  !(Hero is waiting)
+effects:
+  !(Loc2 is not travelable)
+  !(Hero has Weap)
+  (Hero is waiting)
+  !(Hero wants to throw)
+  !(waiting)
+
+$Throw2GreatSea
+"You throw the {Weap} through the sky and it falls into the sea. Nothing happens. You just lose the weapon :,(. Remember you can always find it again ;)"
+roles:
+  Hero:Character
+  Loc:Location
+  Weap:Weapon 
+  Loc2:Location
+preconditions:
+  (Loc is great sea)
+  (Hero is at Loc)
+  (Hero wants to throw)
+  (Loc2 is volcano)
+  (Loc2 is not travelable)
+  !(Weap is sparkling sword)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+  !(Hero is waiting)
+effects:
+  !(Hero has Weap)
+  (Hero does not have Weap)
+  (Hero is waiting)
+  !(Hero wants to throw)
+  !(waiting)
+
+$Examine2GreatSea
+"You examine the area. I wonder where it leads"
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is great sea)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Loc is not travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Library
+$ExamineLibrary
+"Hero examines Owl. You notice that the owls big wings make he nearly impossible to hit from up close, but a precise shot from a distance may do the trick"
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+preconditions:
+  (Boz is owl)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+$PullLeverLibrary
+"Hero pulls lever. You hear a loud bang in the distance. Maybe something opened"
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Hide:Area
+preconditions:
+  (Boz is owl)
+  !(Boz is alive)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Hide is hidden)
+  (Hero wants to pull)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to pull)
+  !(Hide is hidden)
+  !(waiting)
+
+$FightWinLibrary
+"Hero Beats Owl. All the sudden the knowledge of the library and this mysterious lever are open to you"
+roles:
+  Hero:Character
+  Weap:Weapon
+  Boz:Boss
+  Loc:Location
+preconditions:
+  (Hero has equipped Weap)
+  (Boz is owl)
+  (Boz is weak to Weap)
+  (Boz is alive)
+  (Boz is at Loc)
+  (Hero is at Loc)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Boz is alive)
+  !(Hero wants to fight)
+  (Hero is waiting)
+  !(waiting)
+
+$FightLossLibrary
+"Hero loses to Owl. Thankfully an friend of yours sees you slowly bleeding out and drags you back to the Brothel, saving your life. "
+roles:
+  Hero:Character
+  Weap:Weapon
+  Boz:Boss
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Boz is owl)
+  (Hero has equipped Weap)
+  !(Boz is weak to Weap)
+  (Boz is alive)
+  (Loc2 is brothel)
+  (Hero is at Loc)
+  (Boz is at Loc)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to fight)
+  (Hero is waiting)
+  (Hero is at Loc2)
+  !(Hero is at Loc)
+  !(waiting)
+
+
+$ReadLibrary
+"Hero reads books about dragon. He learns there once was a great sword that was used to tame the dragons. Although it went missing many years ago after the fall of Oldshire,now known as Ghost Town"
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+preconditions:
+  (Boz is owl)
+  !(Boz is alive)
+  (Hero is at Loc)
+  (Boz is at Loc)
+  (Hero wants to read)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to read)
+  (Hero is waiting)
+  !(waiting)
+
+#Marsh
+
+$Fight1Marsh
+"Hero fights Fish Hero wins. Fish cleans Gross Sword."
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap1:Weapon
+  Weap2:Weapon
+preconditions:
+  (Loc is marsh)
+  (Hero is at Loc)
+  (Weap1 is gross sword)
+  (Weap2 is sparkling sword)
+  (Hero has Weap1)
+  (Hero does not have Weap2)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  (Hero has Weap2)
+  !(Hero does not have Weap2)
+  !(waiting)
+
+$Fight2Marsh
+"Hero fights Fish. Hero wins."
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is marsh)
+  (Hero is at Loc)
+  (Weap is sparkling sword)
+  (Hero has Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  !(waiting)
+
+$Fight3Marsh
+"Hero fights Fish. Hero wins. This fish looks like it would be good at cleaning something though."
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is marsh)
+  (Hero is at Loc)
+  (Weap is gross sword)
+  (Hero does not have Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  !(waiting)
+
+$ExamineMarsh
+"Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse."
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is marsh)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#plains
+
+$ExaminePlains
+"You examine the area but there is nothing there"
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is plains)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#PoisonFog
+
+$Examine1PoisonFog
+"You examine the area. Maybe a weapon can clear the way through. You remember your mother used to tell you the fog was only meant from Trolls and beasts like it to cross."
+roles:
+  Hero:Character
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Loc is poison fog)
+  (Loc2 is library)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  (Loc2 is not travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+$Throw1PoisonFog
+"You throw the Just Javelin through the fog. It clears the way"
+roles:
+  Hero:Character
+  Loc:Location
+  Loc2:Location
+  Weap:Weapon 
+preconditions:
+  (Loc is poison fog)
+  (Loc2 is library)
+  (Hero is at Loc)
+  (Hero wants to throw)
+  (Loc2 is not travelable)
+  (Weap is just javelin)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+  !(Hero is waiting)
+effects:
+  !(Loc2 is not travelable)
+  !(Hero has Weap)
+  (Hero is waiting)
+  !(Hero wants to throw)
+  !(waiting)
+
+$Throw2PoisonFog
+"You throw the {Weap} through the fog. It soars through but nothing happens. You just lose the weapon :,(. Remember you can always find it again ;)"
+roles:
+  Hero:Character
+  Loc:Location
+  Loc2:Location
+  Weap:Weapon 
+preconditions:
+  (Loc is poison fog)
+  (Loc2 is library)
+  (Hero is at Loc)
+  (Hero wants to throw)
+  (Loc2 is not travelable)
+  !(Weap is just javelin)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+  !(Hero is waiting)
+effects:
+  !(Hero has Weap)
+  (Hero does not have Weap)
+  (Hero is waiting)
+  !(Hero wants to throw)
+  !(waiting)
+
+$Examine2PoisonFog
+"You examine the area. I wonder where it leads"
+roles:
+  Hero:Character
+  Loc:Location
+  Loc2:Location
+preconditions:
+  (Loc is poison fog)
+  (Loc2 is library)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Loc2 is not travelable)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Sands
+$Fight1Sands
+"Hero fights Sand Snake. Hero wins. Sand Snake drops Gross Sword. Maybe someone should clean it off."
+roles:
+  Hero:Character
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is sands)
+  (Hero is at Loc)
+  (Weap is gross sword)
+  (Hero does not have Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  (Hero has Weap)
+  !(Hero does not have Weap)
+  !(waiting)
+
+$Fight2Sands
+"Hero fights Sand Snake. Hero wins."
+roles:
+  Hero:Character
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is sands)
+  (Hero is at Loc)
+  (Weap is gross sword)
+  (Hero has Weap)
+  (Hero wants to fight)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to fight)
+  !(waiting)
+
+$ExamineSands
+"Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse."
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is sands)
+  (Hero is at Loc)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Volcano
+$ExamineVolcano
+"You examine the dragon and notice the massive scar across his chest. He looks unjust and you are ready to end his tyranny."
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is volcano)
+  (Hero is at volcano)
+  (Hero wants to examine)
+  !(Hero is waiting)
+effects:
+  !(Hero wants to examine)
+  (Hero is waiting)
+  !(waiting)
+
+$Fight1Volcano
+"You hit the dragon in an epic scene and win. Something w the stick happens too. Congratulations, you have freed the kingdom from the dragon. Now you can go back to your ways of boozing yourself to an early grave in peace. "
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is volcano)
+  (Hero is at volcano)
+  (Hero wants to fight)
+  (Weap is broad sword of justice)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+  !(Hero is waiting)
+effects:
+  (end1)
+
+
+$End1
+"You have brought back hope and freed the kingdom from Tyranny. Thank you for playing my game. I hope you come and play again."
+preconditions:
+  (end1)
+effects:
+  !(end1)
+  (rlyEnd)
+
+$Fight2Volcano
+"You hit the dragon in epic an scene and lose. Something w the stick happens too. It snaps on the dragon I think. Its hard to remember since you are dead and no one lived to tell the tale."
+roles:
+  Hero:Character
+  Boz:Boss
+  Loc:Location
+  Weap:Weapon
+preconditions:
+  (Loc is volcano)
+  (Hero is at volcano)
+  (Hero wants to fight)
+  !(Weap is broad sword of justice)
+  (Hero has Weap)
+  (Hero has equipped Weap)
+effects:
+  (end2)
+
+
+$End2
+"The dragon has burned you alive and there are no second chances with his undying flames. Thank you for playing and better luck next time"
+preconditions:
+  (end2)
+effects:
+  !(end2)
+  (rlyEnd)
+
+$ThatsAll
+"That's all Folks. Thanks for playing. This is a Sam Gloss production."
+preconditions:
+  (rlyEnd)
+effects:
+  (rlyrlyend)
+
+#Water
+$ExamineWater
+"You are in the water, there is nothing here, turn back"
+roles:
+  Hero:Character
+  Loc:Location
+preconditions:
+  (Loc is water)
+  (Hero is in Loc)
+  (Hero wants to examine)
+effects:
+  (Hero is waiting)
+  !(Hero wants to examine)
+  !(waiting)
+
+#Waiting Screen
+$Waiting
+"Please make your next move"
+roles:
+  Hero:Character
+preconditions:
+  (Hero is waiting)
+

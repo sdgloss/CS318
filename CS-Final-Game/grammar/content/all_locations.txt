@@ -1,0 +1,146 @@
+#Brothel
+
+Hint1 -> You need to cross the bridge to continue. I hear the weapons the creatures drop can help with that
+
+
+Hint2 -> I hear the poisoned fog can be crossed with a certain weapon
+
+
+Hint3 -> I hear the ghost town has hidden secrets. Even a weapon which is good for killing
+
+
+Hint4 -> I hear the Owl was hiding a secret to freeing us from the monsters
+
+
+Hint5 -> There has been some odd noises coming from the ghost towns. I'm scared to check it out
+
+Hint6 -> I hear that a certain sword can part the sea. It requires a combination of acquisition of cleaning. Maybe some of the wild animals are hiding
+
+
+Hint7 -> I hear there was once a great sword that protected the land from the dragons but now it is lost.
+
+
+#Draw bridge
+FightWinDrawBridge -> Hero Beats Troll
+
+
+FightLossDrawBridge -> Hero loses to Troll. Is returned to Brothel
+
+ExamineDrawBridge -> Hero examines Troll
+
+#GhostTown
+
+Examine1GhostTown -> Hero Examines Room. Finds dusty darts
+
+
+Examine2GhostTown -> Hero Examines Room. Notices the scortch on the walls and remember the stories of how they say the ghost town was the first city to fall when the dragons crossed the sea and took over
+
+
+Examine3GhostTown -> Hero Examines Room. Notices that a dart board has appeared
+
+
+Examine4GhostTown -> Hero Examines Room. Maybe this weapon has something to do with the Dragon?
+
+
+DartBoardGhostTown -> Hero Shoots the Darts at the Dart Board. He hits a bullseye and all the sudden a massive sword drops.
+
+
+#Grass
+Fight1Grass -> Hero fights Hyena. Hero wins. Hyena drops Knasty Knife.
+
+
+Fight2Grass -> Hero fights Hyena. Hero wins.
+
+
+
+ExamineGrass -> Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse.
+
+
+#Great Sea
+Examine1GreatSea -> You examine the area. Maybe a weapon can clear the way through
+
+
+Throw1GreatSea -> You throw the Sparkling Sword into the sky, it catches the sun light and all of the sudden the sea parts.
+
+
+Throw2GreatSea -> You throw the <@Weap> through the sky and it falls into the sea. Nothing happens. You just lose the weapon :,(. Remember you can always find it again ;)
+
+Examine2GreatSea -> You examine the area. I wonder where it leads
+
+
+#Library
+ExamineLibrary -> Hero examines Owl
+
+
+PullLeverLibrary -> Hero pulls lever
+
+
+FightWinLibrary -> Hero Beats Owl
+
+
+FightLossLibrary -> Hero loses to Owl. Is returned to Brothel to recover
+
+
+ReadLibrary -> Hero reads books about dragon
+
+
+#Marsh
+
+Fight1Marsh -> Hero fights Fish Hero wins. Fish cleans Gross Sword.
+
+
+Fight2Marsh -> Hero fights Fish. Hero wins.
+
+
+Fight3Marsh -> Hero fights Fish. Hero wins. This fish looks like it would be good at cleaning something though.
+
+
+ExamineMarsh -> Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse.
+
+
+#plains
+
+ExaminePlains -> You examine the area but there is nothing there
+
+
+#PoisonFog
+
+Examine1PoisonFog -> You examine the area. Maybe a weapon can clear the way through
+
+
+Throw1PoisonFog -> You throw the Just Javelin through the fog. It clears the way
+
+
+Throw2PoisonFog -> You throw the <@Weap> through the fog. It soars through but nothing happens. You just lose the weapon :,(. Remember you can always find it again ;)
+
+
+Examine2PoisonFog -> You examine the area. I wonder where it leads
+
+
+#Sands
+Fight1Sands -> Hero fights Sand Snake. Hero wins. Sand Snake drops Gross Sword. Maybe someone should clean it off.
+
+
+Fight2Sands -> Hero fights Sand Snake. Hero wins.
+
+
+ExamineSands -> Hero examines the area and sees a wild animal, although it does not seem like a real threat. It might be hiding some nice treasurse.
+
+
+#Volcano
+ExamineVolcano -> You examine the dragon and notice the massive scar across his chest. He looks unjust and you are ready to end his tyranny.
+
+
+Fight1Volcano -> You hit the dragon in epic scene and win. Something w the stick happens too
+
+
+
+End1 -> You have won and freed the kingdom from Tyranny. Thank you for playing my game. I hope you come and play again.
+
+Fight2Volcano -> You hit the dragon in epic scene and lose. Som ething w the stick happens too
+
+End2 -> The dragon has burned you alive and there are no second chances with his undying flames. Thank you for playing and better luck next time
+
+ExamineWater -> You are in the water. There is nothing here for you, please go back
+
+Waiting -> Please make your next move

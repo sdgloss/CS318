@@ -1,0 +1,96 @@
+	<BEGIN ENTITIES>
+Hero:Character
+Dragon:Boss
+Troll:Boss
+Owl:Boss
+Sand Snake:Boss
+Hyena:Boss
+Fish:Boss
+Knasty Knife:Weapon
+Gross Sword:Weapon
+Sparkling Sword:Weapon
+Just Javelin:Weapon
+Broad Sword of Justice:Weapon
+Dusty Darts:Weapon
+Stick:Weapon
+Volcano:Location
+Draw Bridge:Location
+Library:Location
+Brothel:Location
+Ghost Town:Location
+Great Sea:Location
+Poison Fog:Location
+Sands:Location
+Grass:Location
+Plains:Location
+Marsh:Location
+Water:Location
+Hidden Room:Area
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+<Dragon> is dragon
+<Troll> is troll
+<Owl> is owl 
+<Sand Snake> is sand Snake
+<Hyena> is hyena
+<Fish> is fish
+<Dragon> is weak to <Broad Sword of Justice>
+<Troll> is weak to <Knasty Knife>
+<Troll> is weak to <Sparkling Sword>
+<Troll> is weak to <Gross Sword>
+<Troll> is weak to <Broad Sword of Justice>
+<Troll> has <Just Javelin>
+<Owl> is weak to <Dusty Darts>
+<Owl> is weak to <Broad Sword of Justice>
+<Dragon> is at <Volcano>
+<Troll> is at <Draw Bridge>
+<Owl> is at <Library>
+<Sand Snake> is at <Sands>
+<Hyena> is at <Grass>
+<Fish> is at <Marsh>
+<Dragon> is alive
+<Troll> is alive
+<Owl> is alive
+<Ghost Town> has <Hidden Room>
+<Hidden Room> is hidden
+<Water> is not travelable
+<Library> is not travelable
+<Sands> is not travelable
+<Volcano> is not travelable
+<Plains> is not travelable
+<Hero> is at <Brothel>
+<Hero> is waiting
+<Brothel> is brothel
+<Draw Bridge> is draw bridge
+<Ghost Town> is ghost town
+<Poison Fog> is poison fog
+<Grass> is grass
+<Great Sea> is great sea
+<Library> is library
+<Marsh> is marsh
+<Plains> is plains
+<Sands> is sands
+<Volcano> is volcano
+<Water> is water
+<Broad Sword of Justice> is broad sword of justice
+<Dusty Darts> is dusty darts
+<Sparkling Sword> is sparkling sword
+<Just Javelin> is just javelin
+<Stick> is stick
+<Knasty Knife> is knasty knife
+<Gross Sword> is gross sword
+<Hero> does not have <Knasty Knife>
+<Hero> does not have <Gross Sword>
+<Hero> does not have <Sparkling Sword>
+<Hero> does not have <Just Javelin>
+<Hero> does not have <Broad Sword of Justice>
+<Hero> does not have <Dusty Darts>
+<Hero> has <Stick>
+<Hero> has equipped <Stick>
+
+
+
+
+	<END FACTS>
