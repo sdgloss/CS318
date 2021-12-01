@@ -1,5 +1,0 @@
-i had to edit some file names so the grammar could read them, including every # reference
-the program was too big and crashed my computer a lot, so i think it may have some later glitches on the text files, because if you notice, the early files all make perfect sense but the later the word/file, the worse the quality , might consider making a boundry next time to fix that problem
-Beyond that, the replit to twitter formatting is weird but a lot of those tweets make just enough sense they could be trump
-if you want to edit the text files and such, i left the code commented out so you can play with it if you please
-beyond that, i had a lot of fun with this although it was a little manual labor intesive. 
