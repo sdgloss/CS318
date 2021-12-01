@@ -1,0 +1,32 @@
+	<BEGIN ENTITIES>
+
+George:Monkey
+Harold:Monkey
+James:Monkey
+Jeff:Monkey
+Leopold:Monkey
+Green Banana:Banana
+Yellow Banana:Banana
+Brown Banana:Banana
+Apple:Banana
+Toy Monkey:Banana
+Crackers:Banana
+Rope:Banana
+Branch:Banana
+
+
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+<George> is on the ground
+<James> is on the ground
+<Jeff> is on the ground
+<Harold> is on the ground
+<Leopold> is on the ground
+<Yellow Banana> is edible
+<Green Banana> is edible
+<Apple> is edible
+<Crackers> is edible
+
+	<END FACTS>

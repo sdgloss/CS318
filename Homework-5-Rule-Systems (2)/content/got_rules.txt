@@ -1,0 +1,279 @@
+$Move
+"{Mover} moves to {Destination}"
+roles:
+	Mover:Character
+	Origin:Location
+	Destination:Location
+	?Witness:Character
+preconditions:
+  !(Mover is hidden at Origin)
+  !(Mover is dead)
+	(Mover is at Origin)
+	!(Mover is at Destination)
+	(Witness is at Destination)
+  !(meeting is called)
+effects:
+	(Mover is at Destination)
+  !(Mover is at Origin)
+	(*:Character knows about This)
+
+
+$Unhide
+"{Char} unhides in {Loc}"
+roles:
+  Char:Character
+  Loc:Location
+preconditions:
+  (Char is hidden at Loc)
+effects:
+  !(Char is hidden at Loc)
+
+$Hide
+"{Char} hides in {Loc}"
+prob: 0.1
+roles:
+  Char:Character
+  Loc:Location
+preconditions:
+  !(Char is dead)
+  (Char is at Loc)
+  !(meeting is called)
+effects:
+  !(Char is at Loc)
+  (Char is hidden at Loc)
+
+
+$Search
+"{Char} picks up {Weap}"
+roles:
+  Char:Character
+  Weap:Weapon
+  Loc:Location
+  ?Witness:Character
+preconditions:
+  !(meeting is called)
+  (Weap is at Loc)
+  (Char is at Loc)
+  !(Char has a weap)
+  (Char has murderous intentions)
+  (Witness is at Loc) / (Witness is hidden at Loc)
+effects:
+  (Char has Weap)
+  (Char has a weap)
+  !(Weap is at Loc)
+  (*:Character knows about This)
+
+$Detection
+"{Char} finds a dead {Body}"
+roles:
+  Char:Character
+  Body:Character
+  C1:Character
+  C2:Character
+  C3:Character
+  C4:Character
+  Loc0:Location
+  Greathall:Location
+  Weap:Weapon
+preconditions:
+  !(Char is the murderer)
+  !(meeting is called)
+  (Char is at Loc0)
+  (Body is at Loc0)
+  (Body is dead)
+  (Weap is the weapon)
+effects:
+  (Char found a dead body belonging to Body)
+responses:
+  CallMeeting(C0=Char,C1=C1,C2=C2,C3=C3,C4=C4,Loc0=Loc0,Weap=Weap)
+
+
+$CallMeeting (response)
+"{C0} calls a meeting at {Loc0}"
+roles:
+  C0:Character
+  C1:Character
+  C2:Character
+  C3:Character
+  C4:Character
+  Loc0:Location
+  Weap:Weapon 
+effects:
+  !(*:Character is at *)
+  !(*:Character is hidden at *)
+  (*:Character is at Loc0)
+  (meeting is called)
+responses:
+  StateFacts(C1=C0,Loc=Loc0,Weap=Weap)
+
+
+$Kill
+"{Murderer} talks to {Victim} at {Loc}"
+roles:
+  Murderer:Character
+  Victim:Character
+  Weap:Weapon
+  Loc:Location
+  C1:Character
+  C2:Character
+  C3:Character
+  C4:Character
+preconditions:
+  (Murderer has murderous intentions)
+  !(Victim is hidden at Loc)
+  (Murderer has Weap)
+  (Murderer hates Victim)
+  (Victim is at Loc)
+  (Murderer is at Loc)
+  !(murder happened)
+  !(C1 is at Loc)
+  !(C2 is at Loc)
+  !(C3 is at Loc)
+  !(C4 is at Loc)
+effects:
+  (murder happened)
+  (Victim is dead)
+  (Murderer is the murderer)
+  (Weap is the weapon)
+  (Loc is the location)
+
+$StateFacts (response)
+"{C1} says they found the body at {Loc}, they appear to have been murdered using {Weap}"
+roles:
+  C1:Character
+  Loc:Location
+  Weap:Weapon
+
+$AccuseWeap
+"{C1} says they saw {C2} pick up the {Weap}"
+roles:
+  C1:Character
+  C2:Character
+  Weap:Weapon
+preconditions:
+  !(ended)
+  (Weap is the weapon)
+  (C1 knows about C2 picks up Weap)
+  !(C1 likes C2)
+  (meeting is called)
+  !(C1 accused C2)
+  !(C2 does not think C2 did it)
+effects:
+  (C1 accused C2)
+  (C2 is suspicious) if !(C2 is suspicious) else (C2 is very suspicious)
+  (C1 dislikes C2) if !(C1 dislikes C2) else (C1 hates C2)
+
+$AccuseLoc
+"{C1} says they saw {C2} at {Loc} with {Victim}"
+roles:
+  C1:Character
+  C2:Character
+  Loc:Location
+  Victim:Character
+preconditions:
+  !(ended)
+  (Loc is the location)
+  (C1 knows about C2 moves to Loc)
+  (C1 knows about Victim moves to Loc)
+  (meeting is called)
+  !(C1 likes C2)
+  !(C1 accused C2)
+  !(C2 does not think C2 did it)
+effects:
+  (C1 accused C2)
+  (C2 is suspicious) if !(C2 is suspicious) else (C2 is very suspicious)
+  (C1 dislikes C2) if !(C1 dislikes C2) else (C1 hates C2)
+
+
+
+$Condemn
+"Sansa in her power as Lady of Winterfell decides {C1} is the murderer and orders them to death."
+roles:
+  C1: Character
+  ?C2:Character
+preconditions:
+  !(C1 is sansa)
+  (C1 is very suspicious)
+  (C1 likes C2)
+  (meeting is called)
+  !(ended)
+effects:
+  (C1 was executed)
+  (ended)
+responses:
+  Confess(C1=C2,C2=C1)
+
+
+$LiePos
+"{C1} says that they think {C2} did not do it"
+prob: 0.1
+roles:
+  C1: Character
+  C2: Character
+preconditions:
+  !(ended)
+  !(C1 accused C2)
+  (C1 likes C2)
+  (C2 is suspicious) / (C2 is very suspicious)
+  (meeting is called)
+effects:
+  (C1 does not think C2 did it)
+  !(C2 is very suspicious) if (C2 is very suspicious) else !(C2 is suspicious)
+
+$LieNeg
+"{C1} says that they think {C2} did do it"
+prob: 0.5
+roles:
+  C1: Character
+  C2: Character
+preconditions:
+  !(ended)
+  (meeting is called)
+  (C1 hates C2)
+  !(C2 is suspicious)
+  !(C2 does not think C2 did it)
+effects:
+  (C2 is very suspicious) if !(C2 is very suspicious) else (C2 is suspicious)
+
+
+$Confess (response)
+"{C1} confesses to the murder, sparing {C2}"
+prob: 0.7
+roles:
+  C1: Character
+  C2: Character
+preconditions:
+  (C1 likes C2)
+  (meeting is called)
+effects:
+  !(C2 was executed)
+  (C1 was executed)
+
+$End1
+"Little did they know {Murder} was the actual murderer."
+roles:
+  Murder:Character
+preconditions:
+  !(rlyended)
+  !(Murder was executed)
+  (Murder is the murderer)
+  (ended)
+effects:
+  (rlyended)
+  
+$End2
+"Sansa got it right and {Murder} was the murderer." 
+roles:
+  Murder:Character
+preconditions:
+  !(rlyended)
+  (Murder was executed)
+  (Murder is the murderer)
+  (ended)
+effects:
+  (rlyended)
+
+$ActualEnd
+"The End"
+preconditions:
+  (rlyended)

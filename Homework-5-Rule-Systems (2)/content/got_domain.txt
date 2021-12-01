@@ -1,0 +1,62 @@
+	<BEGIN ENTITIES>
+
+Sansa:Character
+Arya:Character
+Jon:Character
+Petyr:Character
+Theon:Character
+Ramsay:Character
+Kennels:Location
+Lord's Room:Location
+Greathall:Location
+Crypts:Location
+Broken Tower:Location
+God's Wood:Location
+Valyrian Dagger:Weapon
+Dogs:Weapon
+Poison:Weapon
+Needle:Weapon
+
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+
+true
+<Arya> hates <Petyr>
+<Arya> hates <Theon>
+<Petyr> hates <Arya>
+<Petyr> hates <Jon>
+<Ramsay> hates <Jon>
+<Ramsay> hates <Theon>
+<Jon> is at <Greathall>
+<Sansa> is at <Greathall>
+<Arya> is at <Greathall>
+<Petyr> is at <Greathall>
+<Theon> is at <Greathall>
+<Ramsay> is at <Greathall>
+murder hasn't happened
+<Jon> doesn't know his family
+<Jon> is heir to Winterfell
+<Jon> is not heir to the Iron Throne
+<Petyr> killed <Arya>'s father
+<Theon> burned down Winterfell
+<Needle> is at <God's Wood>
+<Poison> is at <Greathall>
+<Dogs> is at <Kennels>
+<Valyrian Dagger> is at <Lord's Room>
+<Arya> has murderous intentions
+<Petyr> has murderous intentions
+<Ramsay> has murderous intentions
+<Jon> likes <Arya>
+<Arya> likes <Jon>
+<Theon> likes <Ramsay>
+<Ramsay> likes <Petyr>
+<Petyr> likes <Theon>
+<Sansa> is sansa
+
+
+
+
+
+	<END FACTS>

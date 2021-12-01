@@ -1,0 +1,36 @@
+	<BEGIN ENTITIES>
+
+Alice:Character
+Bob:Character
+Jose:Character
+Chandra:Character
+Jeff:Character
+Eileen:Character
+Alice's House:Location
+Bar:Location
+
+	<END ENTITIES>
+
+	<BEGIN FACTS>
+
+<Alice> is at <Alice's House>
+<Bob> is at <Bar>
+<Chandra> is at <Bar>
+<Jose> is at <Bar>
+<Jose> knows <Chandra>
+<Jose> knows <Bob>
+<Jose> knows <Alice>
+<Alice> knows <Jose>
+<Alice> knows <Bob>
+<Bob> is mean
+<Alice> dislikes <Jose>
+<Alice> dislikes <Bob>
+<Alice> is mean
+<Jose> is friendly
+<Jose> loves Chandra
+<Chandra> is friendly
+<Chandra> loves Bob
+<Jose> is outgoing
+<Jeff> is outgoing
+
+	<END FACTS>
